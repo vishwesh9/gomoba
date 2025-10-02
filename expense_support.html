@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Expense Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #007AFF;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+        h2 {
+            color: #007AFF;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        h3 {
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        p, li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .faq-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #007AFF;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: #007AFF;
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+        .faq-answer {
+            color: #333;
+        }
+        .tip {
+            background: #e7f3ff;
+            padding: 15px;
+            border-left: 4px solid #2196F3;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .warning {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .contact-box {
+            background: #f0f8ff;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .contact-box a {
+            color: #007AFF;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .feature-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        .feature-title {
+            font-weight: 600;
+            color: #007AFF;
+            margin-bottom: 5px;
+        }
+        .nav-links {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .nav-links a {
+            color: #007AFF;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker Support</h1>
+        <p class="subtitle">Get help with using Expense Tracker</p>
+
+        <h2>📋 Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">How do I add an expense?</div>
+            <div class="faq-answer">
+                <ol>
+                    <li>Tap the <strong>+</strong> button (floating action button) at the bottom right</li>
+                    <li>Choose <strong>Manual Entry</strong> to type details manually</li>
+                    <li>Or choose <strong>Scan Receipt</strong> to use AI extraction (premium)</li>
+                    <li>Fill in amount, merchant, category, and other details</li>
+                    <li>Tap <strong>Save</strong></li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What's the difference between Free and Premium?</div>
+            <div class="faq-answer">
+                <strong>Free Tier:</strong>
+                <ul>
+                    <li>20 expenses per month</li>
+                    <li>2 budgets maximum</li>
+                    <li>Basic analytics</li>
+                    <li>Manual expense entry</li>
+                </ul>
+                <strong>Premium ($1.99/week or $49.99/year):</strong>
+                <ul>
+                    <li>Unlimited expenses</li>
+                    <li>AI-powered receipt scanning</li>
+                    <li>Unlimited budgets with overspend alerts</li>
+                    <li>Advanced analytics and insights</li>
+                    <li>PDF and Excel export</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How does AI receipt scanning work?</div>
+            <div class="faq-answer">
+                <p>AI receipt scanning (premium feature) uses OpenAI's vision technology to extract data from receipt photos:</p>
+                <ol>
+                    <li>Take a photo of your receipt or select from gallery</li>
+                    <li>AI analyzes the image and extracts: amount, merchant, date, category</li>
+                    <li>Review the extracted data (always verify for accuracy!)</li>
+                    <li>Edit any incorrect fields</li>
+                    <li>Save the expense</li>
+                </ol>
+                <div class="tip">
+                    <strong>💡 Tip:</strong> For best results, ensure receipt is well-lit, in focus, and all text is visible.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How do I create a budget?</div>
+            <div class="faq-answer">
+                <ol>
+                    <li>Navigate to the <strong>Budget</strong> tab</li>
+                    <li>Tap the <strong>+</strong> button</li>
+                    <li>Select a category (Food, Transportation, etc.)</li>
+                    <li>Set the budget amount</li>
+                    <li>Choose period: Monthly or Yearly</li>
+                    <li>Tap <strong>Create Budget</strong></li>
+                </ol>
+                <p>Free users can create up to 2 budgets. Premium users have unlimited budgets.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How do budget alerts work?</div>
+            <div class="faq-answer">
+                <p><strong>Premium users</strong> receive notifications when:</p>
+                <ul>
+                    <li>You reach 75% of your budget</li>
+                    <li>You reach 90% of your budget</li>
+                    <li>You exceed your budget (100%+)</li>
+                </ul>
+                <p>Enable notifications in <strong>Settings > Notifications</strong></p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Can I import data from my bank?</div>
+            <div class="faq-answer">
+                <p>Yes! You can import:</p>
+                <ul>
+                    <li><strong>CSV files</strong> - Export from your bank and import</li>
+                    <li><strong>PDF statements</strong> - AI extracts transactions (premium)</li>
+                    <li><strong>Multiple receipts</strong> - Batch process photos (premium)</li>
+                </ul>
+                <p>Go to <strong>Import</strong> tab to access these features.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How do I export my data?</div>
+            <div class="faq-answer">
+                <p><strong>Premium feature:</strong></p>
+                <ol>
+                    <li>Go to <strong>Reports</strong> tab</li>
+                    <li>Select date range and filters</li>
+                    <li>Choose export format:</li>
+                    <ul>
+                        <li><strong>CSV</strong> - For spreadsheets (Excel, Google Sheets)</li>
+                        <li><strong>PDF</strong> - For printing or archiving</li>
+                    </ul>
+                    <li>File will be saved to your device</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Where is my data stored?</div>
+            <div class="faq-answer">
+                <p>All your data is stored <strong>locally on your device</strong>:</p>
+                <ul>
+                    <li>We do NOT upload your data to any cloud servers</li>
+                    <li>Your expenses, budgets, and photos stay on your phone</li>
+                    <li>This ensures maximum privacy</li>
+                </ul>
+                <div class="warning">
+                    <strong>⚠️ Important:</strong> If you delete the app or reset your device, all data will be lost. We recommend exporting your data regularly (premium feature).
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How do I cancel my subscription?</div>
+            <div class="faq-answer">
+                <p><strong>iOS (iPhone/iPad):</strong></p>
+                <ol>
+                    <li>Open <strong>Settings</strong> app</li>
+                    <li>Tap your name at the top</li>
+                    <li>Tap <strong>Subscriptions</strong></li>
+                    <li>Select <strong>Expense Tracker</strong></li>
+                    <li>Tap <strong>Cancel Subscription</strong></li>
+                </ol>
+                <p><strong>Android:</strong></p>
+                <ol>
+                    <li>Open <strong>Google Play Store</strong></li>
+                    <li>Tap Menu (☰) > <strong>Subscriptions</strong></li>
+                    <li>Select <strong>Expense Tracker</strong></li>
+                    <li>Tap <strong>Cancel Subscription</strong></li>
+                </ol>
+                <p>You'll keep premium access until the end of your billing period.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How do I restore my premium subscription?</div>
+            <div class="faq-answer">
+                <ol>
+                    <li>Go to <strong>Settings</strong> tab</li>
+                    <li>Tap <strong>Upgrade to Premium</strong></li>
+                    <li>Tap <strong>Restore Purchases</strong></li>
+                    <li>Your subscription will be restored if active</li>
+                </ol>
+            </div>
+        </div>
+
+        <h2>🔧 Troubleshooting</h2>
+
+        <h3>AI scanning not working</h3>
+        <ul>
+            <li>Ensure you have an active premium subscription</li>
+            <li>Check your internet connection (AI processing requires network)</li>
+            <li>Make sure receipt photo is clear and well-lit</li>
+            <li>Try taking a new photo with better lighting</li>
+        </ul>
+
+        <h3>Notifications not appearing</h3>
+        <ul>
+            <li>Premium feature only</li>
+            <li>Enable in app: <strong>Settings > Notifications</strong> toggle ON</li>
+            <li>Enable in device settings: Allow notifications for Expense Tracker</li>
+            <li>Create budgets to receive alerts</li>
+        </ul>
+
+        <h3>Can't add more expenses</h3>
+        <ul>
+            <li>Free users: 20 expenses per month limit</li>
+            <li>Limit resets on the 1st of each month</li>
+            <li>Upgrade to Premium for unlimited expenses</li>
+        </ul>
+
+        <h3>Can't create more budgets</h3>
+        <ul>
+            <li>Free users: Maximum 2 budgets</li>
+            <li>Upgrade to Premium for unlimited budgets</li>
+        </ul>
+
+        <h3>Export not working</h3>
+        <ul>
+            <li>Premium feature only</li>
+            <li>Ensure you have expenses in the selected date range</li>
+            <li>Check device storage space</li>
+            <li>Grant storage permission if prompted</li>
+        </ul>
+
+        <h3>App crashing or freezing</h3>
+        <ul>
+            <li>Close and restart the app</li>
+            <li>Update to the latest version from App Store/Play Store</li>
+            <li>Restart your device</li>
+            <li>If problem persists, contact support</li>
+        </ul>
+
+        <h3>Data not syncing between devices</h3>
+        <ul>
+            <li>Expense Tracker does NOT sync between devices</li>
+            <li>Each device has its own local data</li>
+            <li>To transfer data: Export from one device, import to another (premium)</li>
+        </ul>
+
+        <h2>💡 Tips & Best Practices</h2>
+
+        <div class="tip">
+            <strong>Backup Your Data:</strong> Premium users should export data regularly to avoid data loss.
+        </div>
+
+        <div class="tip">
+            <strong>Always Verify AI Data:</strong> AI scanning is powerful but not perfect. Always review extracted data before saving.
+        </div>
+
+        <div class="tip">
+            <strong>Use Categories:</strong> Proper categorization helps generate better analytics and insights.
+        </div>
+
+        <div class="tip">
+            <strong>Set Realistic Budgets:</strong> Review your past spending to set achievable budget limits.
+        </div>
+
+        <div class="tip">
+            <strong>Use Filters:</strong> In the home screen, use search and filters to quickly find specific expenses.
+        </div>
+
+        <h2>📱 System Requirements</h2>
+
+        <ul>
+            <li><strong>iOS:</strong> iOS 13.0 or later</li>
+            <li><strong>Android:</strong> Android 8.0 (Oreo) or later</li>
+            <li><strong>Storage:</strong> Minimum 100 MB free space</li>
+            <li><strong>Camera:</strong> Required for receipt scanning</li>
+            <li><strong>Internet:</strong> Required for AI features and subscriptions</li>
+        </ul>
+
+        <h2>📖 Feature Documentation</h2>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-title">Home Tab</div>
+                View and manage all your expenses
+            </div>
+            <div class="feature-card">
+                <div class="feature-title">Analytics Tab</div>
+                Visualize spending patterns and trends
+            </div>
+            <div class="feature-card">
+                <div class="feature-title">Budget Tab</div>
+                Create and monitor budget limits
+            </div>
+            <div class="feature-card">
+                <div class="feature-title">Reports Tab</div>
+                Generate and export reports (premium)
+            </div>
+            <div class="feature-card">
+                <div class="feature-title">Import Tab</div>
+                Bulk import from CSV/PDF/receipts
+            </div>
+            <div class="feature-card">
+                <div class="feature-title">Settings Tab</div>
+                Customize app preferences
+            </div>
+        </div>
+
+        <h2>🆕 Recent Updates</h2>
+
+        <h3>Version 1.0.0 (Current)</h3>
+        <ul>
+            <li>Initial release</li>
+            <li>Expense tracking with local storage</li>
+            <li>AI-powered receipt scanning (premium)</li>
+            <li>Budget creation and monitoring</li>
+            <li>Budget overspend notifications (premium)</li>
+            <li>Analytics and insights</li>
+            <li>CSV/PDF import and export</li>
+            <li>Dark mode support</li>
+        </ul>
+
+        <h2>🐛 Known Issues</h2>
+
+        <p><em>Currently no known issues. Check back for updates.</em></p>
+
+        <h2>📊 Privacy & Security</h2>
+
+        <ul>
+            <li>All data stored locally on your device</li>
+            <li>No cloud sync or backups</li>
+            <li>Receipt images processed securely via OpenAI API</li>
+            <li>We do not sell or share your personal data</li>
+            <li>Read our full <a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+
+        <div class="contact-box">
+            <h2>📧 Contact Support</h2>
+            <p>Still need help? We're here to assist you!</p>
+            <p style="margin-top: 15px;">
+                <a href="mailto:golukicoding@gmail.com">golukicoding@gmail.com</a>
+            </p>
+            <p style="margin-top: 10px; font-size: 14px; color: #666;">
+                We typically respond within 24-48 hours
+            </p>
+        </div>
+
+        <div class="nav-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+    </div>
+</body>
+</html>
