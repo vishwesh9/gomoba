@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support and Help for Invoice Pro - Get answers to your questions">
+    <title>Support & Help - Invoice Pro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #5865F2 0%, #4752C4 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .contact-banner {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #5865F2;
+            text-align: center;
+        }
+
+        .contact-banner h2 {
+            color: #5865F2;
+            margin-bottom: 15px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background-color: #5865F2;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-button:hover {
+            background-color: #4752C4;
+        }
+
+        .app-info {
+            background-color: #f0f4ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .info-item {
+            text-align: center;
+        }
+
+        .info-item strong {
+            display: block;
+            color: #5865F2;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .content-card {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #5865F2;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        h3 {
+            color: #1f2937;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            color: #1f2937;
+            font-size: 1.15em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .faq-question::before {
+            content: "Q:";
+            color: #5865F2;
+            font-weight: 700;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            color: #4b5563;
+            margin-left: 25px;
+            margin-bottom: 10px;
+        }
+
+        .faq-answer::before {
+            content: "A:";
+            color: #10b981;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+
+        ul, ol {
+            margin-left: 45px;
+            margin-bottom: 15px;
+            color: #4b5563;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #5865F2;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .tip-box {
+            background-color: #d1fae5;
+            border-left: 4px solid #10b981;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .tip-box strong {
+            color: #059669;
+        }
+
+        .platform-badges {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background-color: #1f2937;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .email-link {
+            color: #5865F2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #6b7280;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #5865F2;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .content-card {
+                padding: 20px;
+            }
+
+            header {
+                padding: 30px 15px;
+            }
+
+            .app-info {
+                flex-direction: column;
+            }
+
+            .faq-answer {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Support & Help</h1>
+        <p class="subtitle">Invoice Pro - We're here to help!</p>
+    </header>
+
+    <div class="container">
+        <div class="contact-banner">
+            <h2>Need Help?</h2>
+            <p>Have questions or need assistance? We're here to help!</p>
+            <a href="mailto:golukicoding@gmail.com" class="contact-button">📧 Email Support</a>
+            <p style="margin-top: 15px; font-size: 0.9em; color: #6b7280;">Typical response time: Within 48 hours</p>
+        </div>
+
+        <div class="app-info">
+            <div class="info-item">
+                <strong>App Version</strong>
+                <span>1.0.0</span>
+            </div>
+            <div class="info-item">
+                <strong>Platforms</strong>
+                <span>iOS & Android</span>
+            </div>
+            <div class="info-item">
+                <strong>Languages</strong>
+                <span>7 Supported</span>
+            </div>
+            <div class="info-item">
+                <strong>Templates</strong>
+                <span>3 Free + 17 Premium</span>
+            </div>
+        </div>
+
+        <div class="platform-badges">
+            <span class="badge">📱 iPhone</span>
+            <span class="badge">📱 iPad</span>
+            <span class="badge">🤖 Android</span>
+        </div>
+
+        <!-- Getting Started -->
+        <div class="content-card">
+            <h2>🚀 Getting Started</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I get started with Invoice Pro?</div>
+                <div class="faq-answer">When you first open the app, you'll go through a quick 3-step onboarding process:</div>
+                <ol>
+                    <li><strong>Business Information:</strong> Enter your business name, email, and phone number</li>
+                    <li><strong>Logo Upload (Optional):</strong> Upload your business logo or skip this step</li>
+                    <li><strong>Done!</strong> You're ready to create your first invoice</li>
+                </ol>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is Invoice Pro really free?</div>
+                <div class="faq-answer">Yes! Invoice Pro is free forever with no limits. You get:</div>
+                <ul>
+                    <li>Unlimited invoice creation</li>
+                    <li>Unlimited client management</li>
+                    <li>3 professional invoice templates</li>
+                    <li>Full PDF generation and sharing</li>
+                    <li>Complete data export/import functionality</li>
+                </ul>
+                <div class="faq-answer">Premium templates (17 additional designs) are available as a one-time purchase with lifetime access.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do I need an internet connection to use the app?</div>
+                <div class="faq-answer">No! Invoice Pro works 100% offline. All your data is stored locally on your device, so you can create invoices anytime, anywhere without an internet connection.</div>
+            </div>
+        </div>
+
+        <!-- Creating Invoices -->
+        <div class="content-card">
+            <h2>📄 Creating Invoices</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I create my first invoice?</div>
+                <div class="faq-answer">Follow these simple steps:</div>
+                <ol>
+                    <li>Tap the "Create Invoice" button on the home screen</li>
+                    <li>Select a client (or create a new one)</li>
+                    <li>Add invoice items (description, quantity, rate)</li>
+                    <li>Set invoice and due dates</li>
+                    <li>Add optional notes or terms</li>
+                    <li>Choose a template</li>
+                    <li>Preview and generate PDF</li>
+                </ol>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I save invoices as drafts?</div>
+                <div class="faq-answer">Yes! When creating an invoice, tap "Save as Draft" to save your progress. You can return to edit it later from the Invoices screen.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I customize my invoice template?</div>
+                <div class="faq-answer">Go to Settings → Templates → Customize. You can change:</div>
+                <ul>
+                    <li><strong>Accent Color:</strong> Choose from 8 color swatches</li>
+                    <li><strong>Font Style:</strong> Modern, Classic, or Bold</li>
+                    <li><strong>Font Size:</strong> Small, Medium, or Large</li>
+                    <li><strong>Logo Size:</strong> Small, Medium, or Large</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I add tax to my invoice?</div>
+                <div class="faq-answer">Tax is automatically calculated based on your default tax rate. To set or change your tax rate:</div>
+                <ol>
+                    <li>Go to Settings → Invoice Settings</li>
+                    <li>Set your default tax rate (e.g., 10%)</li>
+                    <li>Enable or disable tax</li>
+                    <li>Customize the tax label (e.g., "VAT," "GST," "Sales Tax")</li>
+                </ol>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I apply discounts?</div>
+                <div class="faq-answer">Yes! You can add discounts as either a percentage or fixed amount when creating an invoice. The discount is automatically deducted from the subtotal.</div>
+            </div>
+        </div>
+
+        <!-- Managing Clients -->
+        <div class="content-card">
+            <h2>👥 Managing Clients</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I add a new client?</div>
+                <div class="faq-answer">There are two ways to add clients:</div>
+                <ul>
+                    <li><strong>From Clients Tab:</strong> Go to the Clients tab and tap the "+" button</li>
+                    <li><strong>While Creating Invoice:</strong> Tap "Add New Client" when selecting a client</li>
+                </ul>
+                <div class="faq-answer">Enter the client's name, email, phone (optional), and address (optional).</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I edit or delete clients?</div>
+                <div class="faq-answer">Yes! In the Clients tab, tap on any client to view details. From there you can edit their information or delete them. Note: Deleting a client does not delete their invoices.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I view all invoices for a specific client?</div>
+                <div class="faq-answer">Tap on a client in the Clients tab to see their profile, which includes a list of all invoices created for that client along with total revenue.</div>
+            </div>
+        </div>
+
+        <!-- Premium Features -->
+        <div class="content-card">
+            <h2>👑 Premium Features</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">What do I get with Premium?</div>
+                <div class="faq-answer">Premium unlocks:</div>
+                <ul>
+                    <li><strong>17 Premium Templates:</strong> Beautiful, professionally designed invoice templates</li>
+                    <li><strong>Lifetime Access:</strong> One-time payment, no subscriptions</li>
+                    <li><strong>Future Updates:</strong> New templates added regularly at no extra cost</li>
+                    <li><strong>Full Customization:</strong> All customization options for premium templates</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How much does Premium cost?</div>
+                <div class="faq-answer">Premium is a one-time purchase (no subscription). Pricing varies by region and is displayed in your local currency in the app. Check the Template Gallery or Settings to see current pricing.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I purchase Premium?</div>
+                <div class="faq-answer">To unlock Premium:</div>
+                <ol>
+                    <li>Go to Template Gallery or tap the Premium badge on the home screen</li>
+                    <li>Tap "Unlock Premium"</li>
+                    <li>Complete the purchase through Apple App Store or Google Play</li>
+                    <li>Premium templates are instantly available</li>
+                </ol>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I use Premium on multiple devices?</div>
+                <div class="faq-answer">Yes! Your Premium purchase is tied to your Apple ID (iOS) or Google account (Android). Use "Restore Purchases" in Settings to activate Premium on other devices.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I restore my Premium purchase?</div>
+                <div class="faq-answer">If you purchased Premium and it's not showing:</div>
+                <ol>
+                    <li>Go to Settings → Premium</li>
+                    <li>Tap "Restore Purchases"</li>
+                    <li>Make sure you're signed in with the same Apple ID or Google account used for purchase</li>
+                </ol>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I get a refund?</div>
+                <div class="faq-answer">Refund requests must be submitted to Apple (iOS) or Google (Android):</div>
+                <ul>
+                    <li><strong>iOS:</strong> Go to reportaproblem.apple.com</li>
+                    <li><strong>Android:</strong> Request through Google Play Store</li>
+                </ul>
+                <div class="faq-answer">We recommend trying the free templates first to ensure the app meets your needs.</div>
+            </div>
+        </div>
+
+        <!-- Export & Import -->
+        <div class="content-card">
+            <h2>💾 Export & Import Data</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I backup my data?</div>
+                <div class="faq-answer">To export all your data:</div>
+                <ol>
+                    <li>Go to Settings → Data Management</li>
+                    <li>Tap "Export Data"</li>
+                    <li>Choose where to save the backup file (JSON format)</li>
+                    <li>Store it safely (cloud storage, email to yourself, etc.)</li>
+                </ol>
+                <div class="tip-box">
+                    <strong>Pro Tip:</strong> We recommend backing up your data regularly, especially before updating the app or switching devices.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I restore my data on a new device?</div>
+                <div class="faq-answer">To import your data:</div>
+                <ol>
+                    <li>Install Invoice Pro on your new device</li>
+                    <li>Complete the initial onboarding</li>
+                    <li>Go to Settings → Data Management → Import Data</li>
+                    <li>Select your backup file</li>
+                    <li>All invoices, clients, and settings will be restored</li>
+                </ol>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What format are backups saved in?</div>
+                <div class="faq-answer">Data is exported as a JSON file containing all your invoices, clients, business profile, and settings. This format is human-readable and can be imported back into the app.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I share invoices as PDFs?</div>
+                <div class="faq-answer">Yes! After creating an invoice, tap "Preview Invoice" then use the share button to:</div>
+                <ul>
+                    <li>Email the PDF to your client</li>
+                    <li>Share via messaging apps (WhatsApp, iMessage, etc.)</li>
+                    <li>Save to Files or cloud storage (iCloud, Google Drive, Dropbox)</li>
+                    <li>Print directly</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Troubleshooting -->
+        <div class="content-card">
+            <h2>🔧 Troubleshooting</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">The app is not loading my data</div>
+                <div class="faq-answer">Try these steps:</div>
+                <ol>
+                    <li>Close and restart the app</li>
+                    <li>Check if you have sufficient storage space on your device</li>
+                    <li>If data is still missing, check if you have a recent backup to import</li>
+                    <li>Contact support if the issue persists</li>
+                </ol>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">PDFs are not generating correctly</div>
+                <div class="faq-answer">Ensure:</div>
+                <ul>
+                    <li>You have granted the app file system permissions</li>
+                    <li>Your device has sufficient storage space</li>
+                    <li>All invoice fields are filled correctly</li>
+                    <li>Try a different template to see if the issue is template-specific</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">My logo looks blurry or distorted</div>
+                <div class="faq-answer">For best results:</div>
+                <ul>
+                    <li>Use high-resolution images (at least 500x500 pixels)</li>
+                    <li>Upload square or rectangular logos (not extremely wide or tall)</li>
+                    <li>Supported formats: PNG, JPG</li>
+                    <li>Adjust logo size in template customization settings</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I reset the app?</div>
+                <div class="faq-answer">To reset Invoice Pro:</div>
+                <ul>
+                    <li><strong>Clear All Data:</strong> Settings → Data Management → Clear All Data (deletes everything)</li>
+                    <li><strong>Reset Onboarding:</strong> Settings → Developer Tools (dev mode) or contact support</li>
+                    <li><strong>Full Reset:</strong> Uninstall and reinstall the app</li>
+                </ul>
+                <div class="highlight-box">
+                    <strong>Warning:</strong> Make sure to export your data before resetting! All local data will be permanently deleted.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">The app crashes or freezes</div>
+                <div class="faq-answer">Try these solutions:</div>
+                <ol>
+                    <li>Force close and restart the app</li>
+                    <li>Restart your device</li>
+                    <li>Check for app updates in the App Store/Play Store</li>
+                    <li>Ensure your device OS is up to date</li>
+                    <li>Free up device storage space</li>
+                    <li>If persistent, contact support with details about when the crash occurs</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Language & Settings -->
+        <div class="content-card">
+            <h2>🌍 Language & Settings</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">What languages are supported?</div>
+                <div class="faq-answer">Invoice Pro supports 7 languages:</div>
+                <ul>
+                    <li>English</li>
+                    <li>Español (Spanish)</li>
+                    <li>Français (French)</li>
+                    <li>Deutsch (German)</li>
+                    <li>Português (Portuguese)</li>
+                    <li>Italiano (Italian)</li>
+                    <li>हिन्दी (Hindi)</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I change the app language?</div>
+                <div class="faq-answer">Go to Settings → Preferences → Language and select your preferred language. The app will immediately update.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I change the currency?</div>
+                <div class="faq-answer">Yes! Go to Settings → Invoice Settings → Currency. You can choose from 150+ currencies with proper symbols and formatting.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I change the date format?</div>
+                <div class="faq-answer">Go to Settings → Invoice Settings. You can choose from:</div>
+                <ul>
+                    <li>MM/DD/YYYY (US format)</li>
+                    <li>DD/MM/YYYY (European format)</li>
+                    <li>YYYY-MM-DD (ISO format)</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Does the app support dark mode?</div>
+                <div class="faq-answer">Yes! The app automatically follows your device's dark mode setting, or you can manually toggle it in Settings → Preferences → Theme.</div>
+            </div>
+        </div>
+
+        <!-- Privacy & Security -->
+        <div class="content-card">
+            <h2>🔒 Privacy & Security</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Is my data safe?</div>
+                <div class="faq-answer">Yes! All your data is stored locally on your device. We don't collect, access, or store your information on any servers. Your data never leaves your device unless you explicitly export or share it.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do you track my usage?</div>
+                <div class="faq-answer">No. Invoice Pro does not use analytics, tracking, or advertising. We respect your privacy completely.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What happens if I lose my device?</div>
+                <div class="faq-answer">If your device is lost or stolen:</div>
+                <ul>
+                    <li>Your data is protected by your device's security (passcode, biometrics)</li>
+                    <li>If you have a recent backup, you can restore it on a new device</li>
+                    <li>We cannot recover data remotely since everything is stored locally</li>
+                </ul>
+                <div class="tip-box">
+                    <strong>Pro Tip:</strong> Regular backups are essential! Export your data periodically and save it to cloud storage.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What data does RevenueCat collect?</div>
+                <div class="faq-answer">RevenueCat only processes purchase information (anonymous user ID, purchase history). They do not receive your invoices, business data, or client information. See our <a href="privacy-policy.html" class="email-link">Privacy Policy</a> for details.</div>
+            </div>
+        </div>
+
+        <!-- Contact Support -->
+        <div class="content-card">
+            <h2>📧 Still Need Help?</h2>
+            <p>If you couldn't find the answer to your question in this FAQ, we're here to help!</p>
+
+            <div class="highlight-box">
+                <p><strong>Contact us at:</strong></p>
+                <p style="margin-top: 10px;"><a href="mailto:golukicoding@gmail.com" class="email-link" style="font-size: 1.2em;">golukicoding@gmail.com</a></p>
+                <p style="margin-top: 15px; font-size: 0.95em;">When contacting support, please include:</p>
+                <ul style="margin-top: 10px;">
+                    <li>Your device type (iPhone, iPad, Android)</li>
+                    <li>App version (found in Settings)</li>
+                    <li>A detailed description of the issue</li>
+                    <li>Screenshots if applicable</li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: 600;">⏱️ We typically respond within 48 hours</p>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="content-card">
+            <h2>📚 Additional Resources</h2>
+            <ul>
+                <li><a href="privacy-policy.html" class="email-link">Privacy Policy</a> - How we protect your data</li>
+                <li><a href="terms-of-service.html" class="email-link">Terms of Service</a> - App terms and conditions</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Invoice Pro. All rights reserved.</p>
+        <p>
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="terms-of-service.html">Terms of Service</a> |
+            <a href="mailto:golukicoding@gmail.com">Contact Support</a>
+        </p>
+        <p style="margin-top: 15px; font-size: 0.9em;">Made with ❤️ for freelancers and small businesses</p>
+    </footer>
+</body>
+</html>
