@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Supporto e Aiuto per Invoice Pro - Ottieni risposte alle tue domande">
+    <title>Supporto e Aiuto - Invoice Pro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #5865F2 0%, #4752C4 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .contact-banner {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #5865F2;
+            text-align: center;
+        }
+
+        .contact-banner h2 {
+            color: #5865F2;
+            margin-bottom: 15px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background-color: #5865F2;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-button:hover {
+            background-color: #4752C4;
+        }
+
+        .app-info {
+            background-color: #f0f4ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .info-item {
+            text-align: center;
+        }
+
+        .info-item strong {
+            display: block;
+            color: #5865F2;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .content-card {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #5865F2;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        h3 {
+            color: #1f2937;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            color: #1f2937;
+            font-size: 1.15em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .faq-question::before {
+            content: "D:";
+            color: #5865F2;
+            font-weight: 700;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            color: #4b5563;
+            margin-left: 25px;
+            margin-bottom: 10px;
+        }
+
+        .faq-answer::before {
+            content: "R:";
+            color: #10b981;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+
+        ul, ol {
+            margin-left: 45px;
+            margin-bottom: 15px;
+            color: #4b5563;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #5865F2;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .tip-box {
+            background-color: #d1fae5;
+            border-left: 4px solid #10b981;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .tip-box strong {
+            color: #059669;
+        }
+
+        .platform-badges {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background-color: #1f2937;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .email-link {
+            color: #5865F2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #6b7280;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #5865F2;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .content-card {
+                padding: 20px;
+            }
+
+            header {
+                padding: 30px 15px;
+            }
+
+            .app-info {
+                flex-direction: column;
+            }
+
+            .faq-answer {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Supporto e Aiuto</h1>
+        <p class="subtitle">Invoice Pro - Siamo qui per aiutarti!</p>
+    </header>
+
+    <div class="container">
+        <div class="contact-banner">
+            <h2>Hai Bisogno di Aiuto?</h2>
+            <p>Hai domande o hai bisogno di assistenza? Siamo qui per aiutarti!</p>
+            <a href="mailto:golukicoding@gmail.com" class="contact-button">📧 Supporto via Email</a>
+            <p style="margin-top: 15px; font-size: 0.9em; color: #6b7280;">Tempo di risposta tipico: Entro 48 ore</p>
+        </div>
+
+        <div class="app-info">
+            <div class="info-item">
+                <strong>Versione App</strong>
+                <span>1.0.0</span>
+            </div>
+            <div class="info-item">
+                <strong>Piattaforme</strong>
+                <span>iOS e Android</span>
+            </div>
+            <div class="info-item">
+                <strong>Lingue</strong>
+                <span>7 Supportate</span>
+            </div>
+            <div class="info-item">
+                <strong>Modelli</strong>
+                <span>3 Gratuiti + 17 Premium</span>
+            </div>
+        </div>
+
+        <div class="platform-badges">
+            <span class="badge">📱 iPhone</span>
+            <span class="badge">📱 iPad</span>
+            <span class="badge">🤖 Android</span>
+        </div>
+
+        <!-- Getting Started -->
+        <div class="content-card">
+            <h2>🚀 Iniziare</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Come iniziare con Invoice Pro?</div>
+                <div class="faq-answer">Quando apri l'app per la prima volta, passerai attraverso un rapido processo di onboarding in 3 passaggi:</div>
+                <ol>
+                    <li><strong>Informazioni Aziendali:</strong> Inserisci il nome della tua azienda, email e numero di telefono</li>
+                    <li><strong>Caricamento Logo (Facoltativo):</strong> Carica il logo della tua azienda o salta questo passaggio</li>
+                    <li><strong>Fatto!</strong> Sei pronto a creare la tua prima fattura</li>
+                </ol>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Invoice Pro è davvero gratuito?</div>
+                <div class="faq-answer">Sì! Invoice Pro è gratuito per sempre senza limiti. Ottieni:</div>
+                <ul>
+                    <li>Creazione illimitata di fatture</li>
+                    <li>Gestione illimitata dei clienti</li>
+                    <li>3 modelli di fatture professionali</li>
+                    <li>Generazione e condivisione completa di PDF</li>
+                    <li>Funzionalità completa di esportazione/importazione dati</li>
+                </ul>
+                <div class="faq-answer">I modelli premium (17 design aggiuntivi) sono disponibili come acquisto una tantum con accesso a vita.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Ho bisogno di una connessione internet per usare l'app?</div>
+                <div class="faq-answer">No! Invoice Pro funziona al 100% offline. Tutti i tuoi dati sono archiviati localmente sul tuo dispositivo, quindi puoi creare fatture in qualsiasi momento, ovunque, senza connessione internet.</div>
+            </div>
+        </div>
+
+        <!-- Creating Invoices -->
+        <div class="content-card">
+            <h2>📄 Creazione di Fatture</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Come creare la mia prima fattura?</div>
+                <div class="faq-answer">Segui questi semplici passaggi:</div>
+                <ol>
+                    <li>Tocca il pulsante "Crea Fattura" nella schermata principale</li>
+                    <li>Seleziona un cliente (o creane uno nuovo)</li>
+                    <li>Aggiungi voci della fattura (descrizione, quantità, prezzo)</li>
+                    <li>Imposta le date di fatturazione e scadenza</li>
+                    <li>Aggiungi note o termini opzionali</li>
+                    <li>Scegli un modello</li>
+                    <li>Anteprima e genera il PDF</li>
+                </ol>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Posso salvare le fatture come bozze?</div>
+                <div class="faq-answer">Sì! Quando crei una fattura, tocca "Salva come Bozza" per salvare i tuoi progressi. Puoi tornare a modificarla più tardi dalla schermata Fatture.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Come personalizzare il mio modello di fattura?</div>
+                <div class="faq-answer">Vai su Impostazioni → Modelli → Personalizza. Puoi modificare:</div>
+                <ul>
+                    <li><strong>Colore Accent:</strong> Scegli tra 8 campioni di colore</li>
+                    <li><strong>Stile Font:</strong> Moderno, Classico o Grassetto</li>
+                    <li><strong>Dimensione Font:</strong> Piccolo, Medio o Grande</li>
+                    <li><strong>Dimensione Logo:</strong> Piccolo, Medio o Grande</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Come aggiungere le tasse alla mia fattura?</div>
+                <div class="faq-answer">Le tasse vengono calcolate automaticamente in base alla tua aliquota fiscale predefinita. Per impostare o modificare la tua aliquota fiscale:</div>
+                <ol>
+                    <li>Vai su Impostazioni → Impostazioni Fattura</li>
+                    <li>Imposta la tua aliquota fiscale predefinita (es. 10%)</li>
+                    <li>Abilita o disabilita le tasse</li>
+                    <li>Personalizza l'etichetta delle tasse (es. "IVA", "Imposta sulle Vendite")</li>
+                </ol>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Posso applicare sconti?</div>
+                <div class="faq-answer">Sì! Puoi aggiungere sconti come percentuale o importo fisso quando crei una fattura. Lo sconto viene automaticamente dedotto dal subtotale.</div>
+            </div>
+        </div>
+
+        <!-- Managing Clients -->
+        <div class="content-card">
+            <h2>👥 Gestione Clienti</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Come aggiungere un nuovo cliente?</div>
+                <div class="faq-answer">Ci sono due modi per aggiungere clienti:</div>
+                <ul>
+                    <li><strong>Dalla Scheda Clienti:</strong> Vai alla scheda Clienti e tocca il pulsante "+"</li>
+                    <li><strong>Durante la Creazione della Fattura:</strong> Tocca "Aggiungi Nuovo Cliente" quando selezioni un cliente</li>
+                </ul>
+                <div class="faq-answer">Inserisci il nome del cliente, email, telefono (facoltativo) e indirizzo (facoltativo).</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Posso modificare o eliminare i clienti?</div>
+                <div class="faq-answer">Sì! Nella scheda Clienti, tocca qualsiasi cliente per visualizzare i dettagli. Da lì puoi modificare le loro informazioni o eliminarli. Nota: L'eliminazione di un cliente non elimina le loro fatture.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Come visualizzare tutte le fatture per un cliente specifico?</div>
+                <div class="faq-answer">Tocca un cliente nella scheda Clienti per vedere il loro profilo, che include un elenco di tutte le fatture create per quel cliente insieme al fatturato totale.</div>
+            </div>
+        </div>
+
+        <!-- Premium Features -->
+        <div class="content-card">
+            <h2>👑 Funzionalità Premium</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Cosa ottengo con Premium?</div>
+                <div class="faq-answer">Premium sblocca:</div>
+                <ul>
+                    <li><strong>17 Modelli Premium:</strong> Modelli di fatture belli e progettati professionalmente</li>
+                    <li><strong>Accesso a Vita:</strong> Pagamento una tantum, nessun abbonamento</li>
+                    <li><strong>Aggiornamenti Futuri:</strong> Nuovi modelli aggiunti regolarmente senza costi aggiuntivi</li>
+                    <li><strong>Personalizzazione Completa:</strong> Tutte le opzioni di personalizzazione per i modelli premium</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Quanto costa Premium?</div>
+                <div class="faq-answer">Premium è un acquisto una tantum (nessun abbonamento). Il prezzo varia in base alla regione ed è visualizzato nella tua valuta locale nell'app. Controlla la Galleria Modelli o le Impostazioni per vedere i prezzi attuali.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Come acquistare Premium?</div>
+                <div class="faq-answer">Per sbloccare Premium:</div>
+                <ol>
+                    <li>Vai alla Galleria Modelli o tocca il badge Premium nella schermata principale</li>
+                    <li>Tocca "Sblocca Premium"</li>
+                    <li>Completa l'acquisto tramite Apple App Store o Google Play</li>
+                    <li>I modelli Premium sono disponibili immediatamente</li>
+                </ol>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Posso usare Premium su più dispositivi?</div>
+                <div class="faq-answer">Sì! Il tuo acquisto Premium è legato al tuo ID Apple (iOS) o account Google (Android). Usa "Ripristina Acquisti" nelle Impostazioni per attivare Premium su altri dispositivi.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Come ripristinare il mio acquisto Premium?</div>
+                <div class="faq-answer">Se hai acquistato Premium e non viene visualizzato:</div>
+                <ol>
+                    <li>Vai su Impostazioni → Premium</li>
+                    <li>Tocca "Ripristina Acquisti"</li>
+                    <li>Assicurati di aver effettuato l'accesso con lo stesso ID Apple o account Google utilizzato per l'acquisto</li>
+                </ol>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Posso ottenere un rimborso?</div>
+                <div class="faq-answer">Le richieste di rimborso devono essere inviate ad Apple (iOS) o Google (Android):</div>
+                <ul>
+                    <li><strong>iOS:</strong> Vai su reportaproblem.apple.com</li>
+                    <li><strong>Android:</strong> Richiedi tramite Google Play Store</li>
+                </ul>
+                <div class="faq-answer">Consigliamo di provare prima i modelli gratuiti per assicurarti che l'app soddisfi le tue esigenze.</div>
+            </div>
+        </div>
+
+        <!-- Export & Import -->
+        <div class="content-card">
+            <h2>💾 Esportare e Importare Dati</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Come fare il backup dei miei dati?</div>
+                <div class="faq-answer">Per esportare tutti i tuoi dati:</div>
+                <ol>
+                    <li>Vai su Impostazioni → Gestione Dati</li>
+                    <li>Tocca "Esporta Dati"</li>
+                    <li>Scegli dove salvare il file di backup (formato JSON)</li>
+                    <li>Conservalo in modo sicuro (archiviazione cloud, invia a te stesso via email, ecc.)</li>
+                </ol>
+                <div class="tip-box">
+                    <strong>Suggerimento Professionale:</strong> Consigliamo di fare il backup dei tuoi dati regolarmente, soprattutto prima di aggiornare l'app o cambiare dispositivi.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Come ripristinare i miei dati su un nuovo dispositivo?</div>
+                <div class="faq-answer">Per importare i tuoi dati:</div>
+                <ol>
+                    <li>Installa Invoice Pro sul tuo nuovo dispositivo</li>
+                    <li>Completa l'onboarding iniziale</li>
+                    <li>Vai su Impostazioni → Gestione Dati → Importa Dati</li>
+                    <li>Seleziona il tuo file di backup</li>
+                    <li>Tutte le fatture, i clienti e le impostazioni verranno ripristinate</li>
+                </ol>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">In che formato vengono salvati i backup?</div>
+                <div class="faq-answer">I dati vengono esportati come file JSON contenente tutte le tue fatture, clienti, profilo aziendale e impostazioni. Questo formato è leggibile dall'uomo e può essere reimportato nell'app.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Posso condividere le fatture come PDF?</div>
+                <div class="faq-answer">Sì! Dopo aver creato una fattura, tocca "Anteprima Fattura" e usa il pulsante di condivisione per:</div>
+                <ul>
+                    <li>Inviare il PDF via email al tuo cliente</li>
+                    <li>Condividere tramite app di messaggistica (WhatsApp, iMessage, ecc.)</li>
+                    <li>Salvare su File o archiviazione cloud (iCloud, Google Drive, Dropbox)</li>
+                    <li>Stampare direttamente</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Troubleshooting -->
+        <div class="content-card">
+            <h2>🔧 Risoluzione dei Problemi</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">L'app non sta caricando i miei dati</div>
+                <div class="faq-answer">Prova questi passaggi:</div>
+                <ol>
+                    <li>Chiudi e riavvia l'app</li>
+                    <li>Controlla di avere spazio di archiviazione sufficiente sul dispositivo</li>
+                    <li>Se i dati mancano ancora, controlla se hai un backup recente da importare</li>
+                    <li>Contatta il supporto se il problema persiste</li>
+                </ol>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">I PDF non vengono generati correttamente</div>
+                <div class="faq-answer">Assicurati di:</div>
+                <ul>
+                    <li>Aver concesso le autorizzazioni del file system all'app</li>
+                    <li>Che il tuo dispositivo abbia spazio di archiviazione sufficiente</li>
+                    <li>Che tutti i campi della fattura siano compilati correttamente</li>
+                    <li>Prova un modello diverso per vedere se il problema è specifico del modello</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Il mio logo appare sfocato o distorto</div>
+                <div class="faq-answer">Per risultati migliori:</div>
+                <ul>
+                    <li>Usa immagini ad alta risoluzione (almeno 500x500 pixel)</li>
+                    <li>Carica loghi quadrati o rettangolari (non estremamente larghi o alti)</li>
+                    <li>Formati supportati: PNG, JPG</li>
+                    <li>Regola la dimensione del logo nelle impostazioni di personalizzazione del modello</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Come ripristinare l'app?</div>
+                <div class="faq-answer">Per ripristinare Invoice Pro:</div>
+                <ul>
+                    <li><strong>Cancella Tutti i Dati:</strong> Impostazioni → Gestione Dati → Cancella Tutti i Dati (elimina tutto)</li>
+                    <li><strong>Ripristina Onboarding:</strong> Impostazioni → Strumenti Sviluppatore (modalità dev) o contatta il supporto</li>
+                    <li><strong>Ripristino Completo:</strong> Disinstalla e reinstalla l'app</li>
+                </ul>
+                <div class="highlight-box">
+                    <strong>Avviso:</strong> Assicurati di esportare i tuoi dati prima di ripristinare! Tutti i dati locali verranno eliminati permanentemente.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">L'app si blocca o si congela</div>
+                <div class="faq-answer">Prova queste soluzioni:</div>
+                <ol>
+                    <li>Forza la chiusura e riavvia l'app</li>
+                    <li>Riavvia il dispositivo</li>
+                    <li>Controlla gli aggiornamenti dell'app nell'App Store/Play Store</li>
+                    <li>Assicurati che il sistema operativo del dispositivo sia aggiornato</li>
+                    <li>Libera spazio di archiviazione del dispositivo</li>
+                    <li>Se persiste, contatta il supporto con dettagli su quando si verifica il blocco</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Language & Settings -->
+        <div class="content-card">
+            <h2>🌍 Lingua e Impostazioni</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Quali lingue sono supportate?</div>
+                <div class="faq-answer">Invoice Pro supporta 7 lingue:</div>
+                <ul>
+                    <li>English (Inglese)</li>
+                    <li>Español (Spagnolo)</li>
+                    <li>Français (Francese)</li>
+                    <li>Deutsch (Tedesco)</li>
+                    <li>Português (Portoghese)</li>
+                    <li>Italiano</li>
+                    <li>हिन्दी (Hindi)</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Come cambiare la lingua dell'app?</div>
+                <div class="faq-answer">Vai su Impostazioni → Preferenze → Lingua e seleziona la tua lingua preferita. L'app si aggiornerà immediatamente.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Posso cambiare la valuta?</div>
+                <div class="faq-answer">Sì! Vai su Impostazioni → Impostazioni Fattura → Valuta. Puoi scegliere tra oltre 150 valute con simboli e formattazione appropriati.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Come cambiare il formato della data?</div>
+                <div class="faq-answer">Vai su Impostazioni → Impostazioni Fattura. Puoi scegliere tra:</div>
+                <ul>
+                    <li>MM/DD/YYYY (formato USA)</li>
+                    <li>DD/MM/YYYY (formato europeo)</li>
+                    <li>YYYY-MM-DD (formato ISO)</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">L'app supporta la modalità scura?</div>
+                <div class="faq-answer">Sì! L'app segue automaticamente l'impostazione della modalità scura del tuo dispositivo, oppure puoi attivarla manualmente su Impostazioni → Preferenze → Tema.</div>
+            </div>
+        </div>
+
+        <!-- Privacy & Security -->
+        <div class="content-card">
+            <h2>🔒 Privacy e Sicurezza</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">I miei dati sono sicuri?</div>
+                <div class="faq-answer">Sì! Tutti i tuoi dati sono archiviati localmente sul tuo dispositivo. Non raccogliamo, accediamo o archiviamo le tue informazioni su nessun server. I tuoi dati non lasciano mai il tuo dispositivo a meno che tu non li esporti o condivida esplicitamente.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Tracciate il mio utilizzo?</div>
+                <div class="faq-answer">No. Invoice Pro non utilizza analytics, tracciamento o pubblicità. Rispettiamo completamente la tua privacy.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Cosa succede se perdo il mio dispositivo?</div>
+                <div class="faq-answer">Se il tuo dispositivo viene perso o rubato:</div>
+                <ul>
+                    <li>I tuoi dati sono protetti dalla sicurezza del tuo dispositivo (codice di accesso, biometria)</li>
+                    <li>Se hai un backup recente, puoi ripristinarlo su un nuovo dispositivo</li>
+                    <li>Non possiamo recuperare i dati da remoto poiché tutto è archiviato localmente</li>
+                </ul>
+                <div class="tip-box">
+                    <strong>Suggerimento Professionale:</strong> I backup regolari sono essenziali! Esporta i tuoi dati periodicamente e salvali nell'archiviazione cloud.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Quali dati raccoglie RevenueCat?</div>
+                <div class="faq-answer">RevenueCat elabora solo informazioni di acquisto (ID utente anonimo, cronologia acquisti). Non ricevono le tue fatture, dati aziendali o informazioni sui clienti. Consulta la nostra <a href="https://vishwesh9.github.io/gomoba/invoice_privacy_en.html" class="email-link">Informativa sulla Privacy</a> per i dettagli.</div>
+            </div>
+        </div>
+
+        <!-- Contact Support -->
+        <div class="content-card">
+            <h2>📧 Hai Ancora Bisogno di Aiuto?</h2>
+            <p>Se non hai trovato la risposta alla tua domanda in questa FAQ, siamo qui per aiutarti!</p>
+
+            <div class="highlight-box">
+                <p><strong>Contattaci a:</strong></p>
+                <p style="margin-top: 10px;"><a href="mailto:golukicoding@gmail.com" class="email-link" style="font-size: 1.2em;">golukicoding@gmail.com</a></p>
+                <p style="margin-top: 15px; font-size: 0.95em;">Quando contatti il supporto, includi:</p>
+                <ul style="margin-top: 10px;">
+                    <li>Il tipo di dispositivo (iPhone, iPad, Android)</li>
+                    <li>Versione dell'app (trovata nelle Impostazioni)</li>
+                    <li>Una descrizione dettagliata del problema</li>
+                    <li>Screenshot se applicabile</li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: 600;">⏱️ In genere rispondiamo entro 48 ore</p>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="content-card">
+            <h2>📚 Risorse Aggiuntive</h2>
+            <ul>
+                <li><a href="https://vishwesh9.github.io/gomoba/invoice_privacy_en.html" class="email-link">Informativa sulla Privacy</a> - Come proteggiamo i tuoi dati</li>
+                <li><a href="https://vishwesh9.github.io/gomoba/invoice_terms_en.html" class="email-link">Termini di Servizio</a> - Termini e condizioni dell'app</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Invoice Pro. Tutti i diritti riservati.</p>
+        <p>
+            <a href="https://vishwesh9.github.io/gomoba/invoice_privacy_en.html">Informativa sulla Privacy</a> |
+            <a href="https://vishwesh9.github.io/gomoba/invoice_terms_en.html">Termini di Servizio</a> |
+            <a href="mailto:golukicoding@gmail.com">Contatta il Supporto</a>
+        </p>
+        <p style="margin-top: 15px; font-size: 0.9em;">Realizzato con ❤️ per freelance e piccole imprese</p>
+    </footer>
+</body>
+</html>
