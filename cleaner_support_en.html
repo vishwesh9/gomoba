@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & Help - Swipe Photo Cleaner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .intro {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .contact-box h2 {
+            color: white;
+            border: none;
+            margin-top: 0;
+        }
+
+        .contact-box a {
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            background-color: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .contact-box a:hover {
+            background-color: rgba(255,255,255,0.3);
+        }
+
+        .feature-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            color: #3498db;
+        }
+
+        .tip {
+            background-color: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .faq-answer {
+            color: #555;
+            padding-left: 20px;
+        }
+
+        .step-number {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Support & Help Center</h1>
+        <p class="intro">Welcome to the Swipe Photo Cleaner Support Center! Here you'll find guides, tips, and answers to common questions. If you can't find what you're looking for, feel free to contact us.</p>
+
+        <div class="contact-box">
+            <h2>Need Help?</h2>
+            <p>Our support team is here to assist you!</p>
+            <a href="mailto:codewithgolu@gmail.com">codewithgolu@gmail.com</a>
+        </div>
+
+        <h2>Getting Started</h2>
+
+        <div class="feature-card">
+            <h3>Step 1: Grant Photo Access</h3>
+            <p>The app needs permission to access your photo library to help you organize and clean your photos. When prompted:</p>
+            <ol>
+                <li>Tap "Allow Access to All Photos" for full functionality</li>
+                <li>Or select "Select Photos..." if you want to limit access</li>
+                <li>You can change permissions later in your device Settings</li>
+            </ol>
+        </div>
+
+        <div class="feature-card">
+            <h3>Step 2: Understand the Interface</h3>
+            <p>The app is organized into four main tabs:</p>
+            <ul>
+                <li><strong>Home:</strong> Overview, quick stats, and "On This Day" memories</li>
+                <li><strong>Swipe:</strong> Main photo review interface (Tinder-style)</li>
+                <li><strong>Review:</strong> See all organized photos (Keep/Maybe/Trash)</li>
+                <li><strong>Explore:</strong> Additional features and settings</li>
+            </ul>
+        </div>
+
+        <div class="feature-card">
+            <h3>Step 3: Start Swiping</h3>
+            <p>Navigate to the Swipe tab and start organizing:</p>
+            <ul>
+                <li><strong>Swipe Right:</strong> Keep this photo</li>
+                <li><strong>Swipe Left:</strong> Move to trash (30-day recovery period)</li>
+                <li><strong>Swipe Up:</strong> Maybe later (review again)</li>
+                <li><strong>Tap:</strong> Undo last action</li>
+                <li><strong>Long Press:</strong> View photo details and metadata</li>
+            </ul>
+        </div>
+
+        <h2>Core Features</h2>
+
+        <h3>Swipe Interface</h3>
+        <p>Our intuitive swipe interface makes photo cleanup fast and fun:</p>
+        <ul>
+            <li>Photos are organized by month for easier review</li>
+            <li>Progress is saved automatically - pick up where you left off</li>
+            <li>Quickly make decisions with simple gestures</li>
+            <li>Undo mistakes with a single tap</li>
+        </ul>
+
+        <div class="tip">
+            <strong>💡 Pro Tip:</strong> Adjust swipe sensitivity in Settings to match your preference. Higher sensitivity = smaller swipe distance needed.
+        </div>
+
+        <h3>Smart Clean (AI-Powered)</h3>
+        <p>Use AI to automatically identify different types of photos:</p>
+
+        <ul>
+            <li><strong>Screenshots (Free):</strong> Find all screenshots in your library</li>
+            <li><strong>Blurry Photos (Premium):</strong> Detect low-quality, out-of-focus images</li>
+            <li><strong>Duplicates (Premium):</strong> Find similar and duplicate photos</li>
+            <li><strong>WhatsApp Media (Premium):</strong> Identify photos from WhatsApp</li>
+            <li><strong>Old Photos (Premium):</strong> Find photos older than a specified date</li>
+        </ul>
+
+        <p><strong>Free Tier Limit:</strong> Up to 100 photos analyzed with AI<br>
+        <strong>Premium:</strong> Unlimited AI analysis</p>
+
+        <div class="tip">
+            <strong>💡 Pro Tip:</strong> Adjust duplicate detection sensitivity in settings (0.3-0.7). Lower values = stricter matching, higher values = more lenient.
+        </div>
+
+        <h3>Bookmarks</h3>
+        <p>Save your favorite photos for quick access:</p>
+        <ul>
+            <li>Free: Up to 10 bookmarks</li>
+            <li>Premium: Unlimited bookmarks</li>
+            <li>Access bookmarked photos from the Explore tab</li>
+            <li>Long press any photo and select "Bookmark" to save</li>
+        </ul>
+
+        <h3>Review & Organize</h3>
+        <p>The Review tab shows all your organized photos in three categories:</p>
+        <ul>
+            <li><strong>Keep:</strong> Photos you want to preserve</li>
+            <li><strong>Maybe:</strong> Photos you're unsure about</li>
+            <li><strong>Trash:</strong> Photos marked for deletion (30-day period)</li>
+        </ul>
+
+        <p>In Review mode you can:</p>
+        <ul>
+            <li>Select multiple photos for bulk actions</li>
+            <li>Move photos between categories</li>
+            <li>Permanently delete trash items</li>
+            <li>Restore accidentally deleted photos</li>
+        </ul>
+
+        <h2>Subscription & Billing</h2>
+
+        <h3>Premium Features</h3>
+        <p>Unlock premium features with a subscription:</p>
+        <ul>
+            <li>Unlimited AI analysis</li>
+            <li>All Smart Clean categories</li>
+            <li>Unlimited bookmarks</li>
+            <li>Premium themes</li>
+            <li>Extended statistics</li>
+        </ul>
+
+        <h3>How to Subscribe</h3>
+        <ol>
+            <li>Tap the Premium badge anywhere in the app</li>
+            <li>Choose Weekly or Annual subscription</li>
+            <li>Confirm purchase through App Store/Play Store</li>
+            <li>Premium features activate immediately</li>
+        </ol>
+
+        <h3>How to Restore Purchases</h3>
+        <p>If you've subscribed on another device or reinstalled the app:</p>
+        <ol>
+            <li>Go to Settings</li>
+            <li>Scroll to "Subscription" section</li>
+            <li>Tap "Restore Purchases"</li>
+            <li>Your premium status will be restored automatically</li>
+        </ol>
+
+        <h3>How to Cancel Subscription</h3>
+
+        <p><strong>For iOS (iPhone/iPad):</strong></p>
+        <ol>
+            <li>Open the Settings app</li>
+            <li>Tap your name at the top</li>
+            <li>Tap "Subscriptions"</li>
+            <li>Select "Swipe Photo Cleaner"</li>
+            <li>Tap "Cancel Subscription"</li>
+        </ol>
+
+        <p><strong>For Android:</strong></p>
+        <ol>
+            <li>Open the Google Play Store</li>
+            <li>Tap Menu → Subscriptions</li>
+            <li>Select "Swipe Photo Cleaner"</li>
+            <li>Tap "Cancel Subscription"</li>
+        </ol>
+
+        <div class="warning">
+            <strong>⚠️ Important:</strong> Canceling will stop future charges, but you'll retain premium access until the end of your current billing period.
+        </div>
+
+        <h3>Refund Requests</h3>
+        <p>All purchases are processed through the App Store or Play Store. To request a refund:</p>
+        <ul>
+            <li><strong>iOS:</strong> Visit <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a></li>
+            <li><strong>Android:</strong> Visit <a href="https://support.google.com/googleplay/answer/2479637" target="_blank">Google Play Support</a></li>
+        </ul>
+
+        <h2>Photo Recovery & Deletion</h2>
+
+        <h3>30-Day Trash Period</h3>
+        <p>When you mark photos for deletion, they're not immediately removed:</p>
+        <ul>
+            <li>Photos go to the Trash folder</li>
+            <li>You have 30 days to change your mind</li>
+            <li>Restore any photo during this period</li>
+            <li>Photos automatically delete after 30 days</li>
+        </ul>
+
+        <h3>How to Recover Deleted Photos</h3>
+        <ol>
+            <li>Go to the Review tab</li>
+            <li>Select "Trash" at the top</li>
+            <li>Find the photo you want to recover</li>
+            <li>Long press and select "Move to Keep" or "Move to Maybe"</li>
+        </ol>
+
+        <div class="warning">
+            <strong>⚠️ Warning:</strong> Once photos are permanently deleted (after 30 days or manual deletion), they CANNOT be recovered. Always ensure you have backups of important photos!
+        </div>
+
+        <h3>Permanent Deletion</h3>
+        <p>To permanently delete photos before the 30-day period:</p>
+        <ol>
+            <li>Go to Review → Trash</li>
+            <li>Tap "Empty Trash" at the bottom</li>
+            <li>Confirm the permanent deletion</li>
+        </ol>
+
+        <h2>Troubleshooting</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">App won't access my photos</div>
+            <div class="faq-answer">
+                <p><strong>Solution:</strong></p>
+                <ol>
+                    <li>Open your device Settings</li>
+                    <li>Find "Swipe Photo Cleaner" in the app list</li>
+                    <li>Tap "Photos" and select "All Photos"</li>
+                    <li>Restart the app</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">App crashes or freezes</div>
+            <div class="faq-answer">
+                <p><strong>Try these steps:</strong></p>
+                <ol>
+                    <li>Force close the app and restart</li>
+                    <li>Ensure you have the latest version from the App Store/Play Store</li>
+                    <li>Restart your device</li>
+                    <li>Check if you have sufficient storage space (at least 1GB free)</li>
+                    <li>If issues persist, contact support with your device model and OS version</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Smart Clean not working or inaccurate</div>
+            <div class="faq-answer">
+                <p><strong>Notes:</strong></p>
+                <ul>
+                    <li>AI detection requires iOS 17+ for blur detection</li>
+                    <li>Duplicate detection may need sensitivity adjustment (Settings → Smart Detection)</li>
+                    <li>Free tier limited to 100 photos - upgrade to Premium for unlimited</li>
+                    <li>Always review AI suggestions before permanent deletion</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">My statistics are wrong or not updating</div>
+            <div class="faq-answer">
+                <p><strong>Solution:</strong></p>
+                <ul>
+                    <li>Pull down on the Home screen to refresh statistics</li>
+                    <li>Statistics update may take a few seconds after large batch operations</li>
+                    <li>Ensure you've completed the onboarding process</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Premium features not working after purchase</div>
+            <div class="faq-answer">
+                <p><strong>Try these steps:</strong></p>
+                <ol>
+                    <li>Close and reopen the app</li>
+                    <li>Go to Settings → Tap "Restore Purchases"</li>
+                    <li>Check your App Store/Play Store purchase history to confirm the transaction</li>
+                    <li>If still not working, contact support with your purchase receipt</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Photos deleted from wrong album or by mistake</div>
+            <div class="faq-answer">
+                <p><strong>Recovery:</strong></p>
+                <ul>
+                    <li>Check the Trash folder in Review tab (30-day recovery window)</li>
+                    <li>If already permanently deleted, check your device's "Recently Deleted" album</li>
+                    <li>Restore from iCloud/Google Photos backup if available</li>
+                    <li>The app cannot recover photos after permanent deletion</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Are my photos uploaded to any server?</div>
+            <div class="faq-answer">
+                <p><strong>No!</strong> All photo processing happens locally on your device. Your photos never leave your phone. We cannot access, view, or store your photos on any server.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How accurate is the AI blur/duplicate detection?</div>
+            <div class="faq-answer">
+                <p>Our AI is quite accurate, but not perfect. We recommend always reviewing AI suggestions before permanently deleting photos. You can adjust sensitivity in Settings to reduce false positives.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Can I use this on multiple devices?</div>
+            <div class="faq-answer">
+                <p>Yes! Your subscription is linked to your Apple ID or Google account. Use "Restore Purchases" on new devices. However, local data (keep/trash decisions) is device-specific and doesn't sync between devices.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Will this delete my photos from iCloud or Google Photos?</div>
+            <div class="faq-answer">
+                <p>If you have iCloud Photo Library or Google Photos backup enabled with "sync deletions" turned on, yes - deleted photos will also be removed from the cloud. Always check your cloud backup settings before mass deletions.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How much storage can I reclaim?</div>
+            <div class="faq-answer">
+                <p>This varies greatly by user! The app shows estimated storage savings on the Home screen. On average, users reclaim 2-5GB by removing screenshots, duplicates, and blurry photos.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What's the difference between Keep and Maybe?</div>
+            <div class="faq-answer">
+                <ul>
+                    <li><strong>Keep:</strong> Photos you definitely want to preserve</li>
+                    <li><strong>Maybe:</strong> Photos you're unsure about - review later when you have more time</li>
+                </ul>
+                <p>Both categories are safe - photos won't be deleted unless you explicitly move them to Trash.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Can I export my organized photos?</div>
+            <div class="faq-answer">
+                <p>Currently, the app works directly with your device's photo library. Your keep/maybe/trash decisions are stored locally. You can manually create albums in your device's Photos app and move photos there.</p>
+            </div>
+        </div>
+
+        <h2>Privacy & Security</h2>
+
+        <div class="feature-card">
+            <h3>Your Privacy Matters</h3>
+            <ul>
+                <li>All photo processing is done locally on your device</li>
+                <li>We never upload, access, or store your photos</li>
+                <li>Only anonymous analytics are collected (app usage, crashes)</li>
+                <li>No personal information is sold to third parties</li>
+            </ul>
+            <p>For full details, read our <a href="privacy.html">Privacy Policy</a>.</p>
+        </div>
+
+        <h2>Tips & Best Practices</h2>
+
+        <div class="tip">
+            <strong>💡 Backup First:</strong> Before starting a major cleanup, ensure you have backups in iCloud, Google Photos, or another service.
+        </div>
+
+        <div class="tip">
+            <strong>💡 Start Small:</strong> Begin with one month or category (e.g., screenshots) to get comfortable with the interface.
+        </div>
+
+        <div class="tip">
+            <strong>💡 Review AI Suggestions:</strong> Always double-check AI-detected photos before permanently deleting them.
+        </div>
+
+        <div class="tip">
+            <strong>💡 Use Bookmarks:</strong> Save important photos you come across during cleanup - you can organize them later.
+        </div>
+
+        <div class="tip">
+            <strong>💡 Check Trash Regularly:</strong> Review your Trash folder periodically to ensure nothing important was marked by mistake.
+        </div>
+
+        <div class="tip">
+            <strong>💡 Adjust Sensitivity:</strong> Customize swipe sensitivity and duplicate detection thresholds to match your preferences.
+        </div>
+
+        <h2>Contact Support</h2>
+
+        <p>Still need help? We're here for you!</p>
+
+        <div class="contact-box">
+            <h2>Get in Touch</h2>
+            <p>Email us with any questions, issues, or feedback:</p>
+            <a href="mailto:codewithgolu@gmail.com">codewithgolu@gmail.com</a>
+            <p style="margin-top: 20px; font-size: 0.9em;">Please include:</p>
+            <ul style="text-align: left; display: inline-block; font-size: 0.9em;">
+                <li>Your device model (e.g., iPhone 14, Samsung Galaxy S23)</li>
+                <li>Operating system version (e.g., iOS 17.2, Android 14)</li>
+                <li>App version (found in Settings)</li>
+                <li>Detailed description of the issue</li>
+                <li>Screenshots if applicable</li>
+            </ul>
+            <p style="margin-top: 15px; font-size: 0.9em;"><strong>Response Time:</strong> We typically respond within 24-48 hours</p>
+        </div>
+
+        <h2>Useful Links</h2>
+
+        <ul>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><strong>Email Support:</strong> <a href="mailto:codewithgolu@gmail.com">codewithgolu@gmail.com</a></li>
+        </ul>
+
+        <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid #eee; text-align: center; color: #7f8c8d;">
+            <p><strong>Swipe Photo Cleaner</strong></p>
+            <p>Developed by vishwesh789</p>
+            <p style="margin-top: 10px;">Version 1.0.0</p>
+        </div>
+    </div>
+</body>
+</html>
