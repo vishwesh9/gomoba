@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - aiSummerizer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        .contact-box {
+            background-color: #e8f4fd;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+        .feature-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 6px;
+            border-left: 3px solid #3498db;
+        }
+        .feature-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .warning {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .tip {
+            background-color: #d4edda;
+            padding: 15px;
+            border-left: 4px solid #28a745;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .faq-question {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .faq-answer {
+            color: #555;
+            margin-left: 15px;
+        }
+        .steps {
+            counter-reset: step-counter;
+            list-style: none;
+            margin-left: 0;
+        }
+        .steps li {
+            counter-increment: step-counter;
+            margin-bottom: 20px;
+            padding-left: 40px;
+            position: relative;
+        }
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #3498db;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            font-weight: bold;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #2980b9;
+            text-decoration: none;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>aiSummerizer Support</h1>
+        <p class="subtitle">Get help with recording, transcribing, and organizing your meetings</p>
+
+        <div class="contact-box">
+            <h3 style="margin-top: 0;">Need Help?</h3>
+            <p>If you can't find the answer to your question below, please contact us:</p>
+            <p><strong>Email:</strong> <a href="mailto:golukicoding@gmail.com">golukicoding@gmail.com</a></p>
+            <p><strong>Response Time:</strong> We typically respond within 24-48 hours</p>
+            <a href="mailto:golukicoding@gmail.com" class="button">Contact Support</a>
+        </div>
+
+        <h2>Getting Started</h2>
+
+        <div class="feature-card">
+            <h3>🎙️ Recording Your First Meeting</h3>
+            <ol class="steps">
+                <li>Open the App and tap the red record button on the home screen</li>
+                <li>Grant microphone permission when prompted</li>
+                <li>Speak clearly during your meeting</li>
+                <li>Tap the stop button when finished</li>
+                <li>Add a title for your recording (or use the suggested calendar title)</li>
+                <li>Your recording will be automatically transcribed</li>
+            </ol>
+        </div>
+
+        <div class="tip">
+            <strong>💡 Pro Tip:</strong> For best transcription quality, record in a quiet environment and speak clearly at a moderate pace.
+        </div>
+
+        <h2>Key Features</h2>
+
+        <div class="feature-card">
+            <h3>📝 AI Transcription</h3>
+            <p>aiSummerizer uses advanced AI to convert your audio into text:</p>
+            <ul>
+                <li><strong>Automatic:</strong> Transcription begins immediately after recording</li>
+                <li><strong>Multi-language:</strong> Supports 50+ languages</li>
+                <li><strong>Accurate:</strong> Powered by OpenAI Whisper technology</li>
+                <li><strong>Timestamped:</strong> Click any part of the transcript to jump to that moment in the audio</li>
+            </ul>
+            <p><strong>To change transcription language:</strong></p>
+            <ol>
+                <li>Go to Settings → Transcription Language</li>
+                <li>Select your preferred language</li>
+                <li>All future recordings will use this language</li>
+            </ol>
+        </div>
+
+        <div class="feature-card">
+            <h3>🤖 AI Summaries</h3>
+            <p>Get instant summaries of your meetings:</p>
+            <ul>
+                <li>Automatically generated after transcription completes</li>
+                <li>Highlights key points and action items</li>
+                <li>Available in different styles (brief, detailed, action items)</li>
+            </ul>
+            <p><strong>To regenerate a summary:</strong></p>
+            <ol>
+                <li>Open a meeting from your library</li>
+                <li>Scroll to the Summary section</li>
+                <li>Tap "Regenerate" to create a new summary</li>
+            </ol>
+        </div>
+
+        <div class="feature-card">
+            <h3>💬 AI Chat</h3>
+            <p>Ask questions about your meeting content:</p>
+            <ul>
+                <li>Open any meeting and tap the chat icon</li>
+                <li>Ask questions like "What were the main action items?" or "What did John say about the budget?"</li>
+                <li>Get instant AI-powered answers based on your transcript</li>
+            </ul>
+        </div>
+
+        <div class="feature-card">
+            <h3>📂 Import Audio Files</h3>
+            <p>Transcribe existing recordings:</p>
+            <ol>
+                <li>Tap the "Import" button on the home screen</li>
+                <li>Choose "Import from Files" or "Import from Photos"</li>
+                <li>Select your audio or video file</li>
+                <li>Wait for transcription to complete</li>
+            </ol>
+            <p><strong>Supported formats:</strong> MP3, M4A, WAV, MP4, MOV, and other common audio/video formats</p>
+            <p><strong>File size limit:</strong> 100MB (Pro), 25MB (Free)</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>📤 Export Options</h3>
+            <p><strong>Export as Text (.txt):</strong></p>
+            <ul>
+                <li>Open a meeting</li>
+                <li>Tap the export icon (↗)</li>
+                <li>Choose "Export as Text"</li>
+                <li>Share via any app or save to Files</li>
+            </ul>
+            <p><strong>Export as PDF (.pdf) [Pro only]:</strong></p>
+            <ul>
+                <li>Open a meeting</li>
+                <li>Tap the export icon</li>
+                <li>Choose "Export as PDF"</li>
+                <li>Professional formatted document with transcript and summary</li>
+            </ul>
+        </div>
+
+        <h2>Subscription & Pro Features</h2>
+
+        <div class="feature-card">
+            <h3>🆓 Free Tier Includes:</h3>
+            <ul>
+                <li>Up to 3 meeting recordings</li>
+                <li>AI transcription</li>
+                <li>AI summaries</li>
+                <li>Text export</li>
+            </ul>
+        </div>
+
+        <div class="feature-card">
+            <h3>⭐ Pro Subscription Unlocks:</h3>
+            <ul>
+                <li><strong>Unlimited recordings</strong></li>
+                <li><strong>Extended recording length</strong> (up to 100 minutes)</li>
+                <li><strong>PDF export</strong></li>
+                <li><strong>Import audio files</strong></li>
+                <li><strong>YouTube transcription</strong></li>
+                <li><strong>Advanced AI features</strong></li>
+            </ul>
+            <p><strong>Subscription pricing:</strong> Pricing varies by region and is set by the App Store/Google Play. Check the paywall in the app for your local pricing.</p>
+        </div>
+
+        <h3>Managing Your Subscription</h3>
+        <p><strong>To upgrade to Pro:</strong></p>
+        <ol>
+            <li>Tap "Upgrade to Pro" anywhere in the app</li>
+            <li>Review the features and pricing</li>
+            <li>Complete purchase through App Store/Google Play</li>
+            <li>Pro features activate immediately</li>
+        </ol>
+
+        <p><strong>To cancel your subscription:</strong></p>
+        <ul>
+            <li><strong>iOS:</strong> Settings → Your Name → Subscriptions → aiSummerizer → Cancel Subscription</li>
+            <li><strong>Android:</strong> Google Play → Menu → Subscriptions → aiSummerizer → Cancel</li>
+        </ul>
+
+        <p><strong>To restore purchases:</strong></p>
+        <ol>
+            <li>Open Settings in the app</li>
+            <li>Tap "Restore Purchases"</li>
+            <li>Your Pro access will be restored if you have an active subscription</li>
+        </ol>
+
+        <h2>Data Management</h2>
+
+        <h3>Where is my data stored?</h3>
+        <p>All your recordings, transcripts, and summaries are stored <strong>locally on your device</strong>. We do not store your content on any servers (except temporarily when processing through AI services).</p>
+
+        <div class="warning">
+            <strong>⚠️ Important:</strong> We do not provide cloud backup. If you uninstall the app or reset your device, your data will be lost. Make sure to export important meetings before uninstalling.
+        </div>
+
+        <h3>Backing Up Your Data</h3>
+        <ol>
+            <li>Export important meetings as PDF or text</li>
+            <li>Save exported files to your cloud storage (iCloud, Google Drive, etc.)</li>
+            <li>Your audio files are automatically included in iOS/Android backups if enabled</li>
+        </ol>
+
+        <h3>Deleting Your Data</h3>
+        <p><strong>Delete a single meeting:</strong></p>
+        <ol>
+            <li>Go to Library</li>
+            <li>Swipe left on the meeting</li>
+            <li>Tap "Delete"</li>
+        </ol>
+
+        <p><strong>Delete all data:</strong></p>
+        <ol>
+            <li>Go to Settings</li>
+            <li>Tap "Clear All Data"</li>
+            <li>Confirm deletion</li>
+        </ol>
+
+        <h2>Troubleshooting</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">❌ Transcription failed or is stuck</div>
+            <div class="faq-answer">
+                <p><strong>Try these steps:</strong></p>
+                <ol>
+                    <li>Check your internet connection (AI transcription requires internet)</li>
+                    <li>Make sure the audio file is not corrupted</li>
+                    <li>Try deleting and re-recording the meeting</li>
+                    <li>If the file is very large, it may take several minutes to process</li>
+                    <li>Restart the app and try again</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">🔇 No audio in my recording</div>
+            <div class="faq-answer">
+                <p><strong>Check the following:</strong></p>
+                <ul>
+                    <li>Ensure you granted microphone permission to the app</li>
+                    <li>Check your device is not in silent mode (may affect some devices)</li>
+                    <li>Try recording a test meeting to verify microphone functionality</li>
+                    <li>Restart the app and try recording again</li>
+                    <li>Check if other apps can record audio (to rule out device issues)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">📱 App crashes or freezes</div>
+            <div class="faq-answer">
+                <p><strong>Resolution steps:</strong></p>
+                <ol>
+                    <li>Force quit the app and restart it</li>
+                    <li>Restart your device</li>
+                    <li>Make sure you have the latest app version from the App Store</li>
+                    <li>Check if you have enough storage space on your device</li>
+                    <li>If the problem persists, contact support</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">💸 Purchase not working or not recognized</div>
+            <div class="faq-answer">
+                <p><strong>Try these solutions:</strong></p>
+                <ol>
+                    <li>Go to Settings → Tap "Restore Purchases"</li>
+                    <li>Restart the app</li>
+                    <li>Verify the purchase went through in App Store/Google Play</li>
+                    <li>Make sure you're signed in with the same Apple/Google account</li>
+                    <li>Contact support if the issue persists</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">🌍 Poor transcription quality</div>
+            <div class="faq-answer">
+                <p><strong>Improve transcription accuracy:</strong></p>
+                <ul>
+                    <li>Record in a quiet environment with minimal background noise</li>
+                    <li>Speak clearly at a moderate pace</li>
+                    <li>Ensure you've selected the correct language in Settings</li>
+                    <li>Use a good quality microphone if possible</li>
+                    <li>Keep your device close to the speakers</li>
+                    <li>For multiple speakers, try to ensure they speak one at a time</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">📤 Export not working</div>
+            <div class="faq-answer">
+                <p><strong>Troubleshooting export issues:</strong></p>
+                <ul>
+                    <li>Make sure the transcription has completed before exporting</li>
+                    <li>For PDF export, ensure you have Pro subscription</li>
+                    <li>Check that you have storage space available</li>
+                    <li>Try exporting as text first to verify the feature works</li>
+                    <li>Grant necessary file access permissions</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Is my data private and secure?</div>
+            <div class="faq-answer">
+                <p>Yes. All your recordings and transcripts are stored locally on your device. However, when you use AI features (transcription, summaries, chat), your audio and text are sent to OpenAI for processing. Please review our <a href="privacy.html">Privacy Policy</a> for complete details.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Do I need an internet connection?</div>
+            <div class="faq-answer">
+                <p>You can record audio offline, but you need an internet connection for:</p>
+                <ul>
+                    <li>AI transcription</li>
+                    <li>AI summaries</li>
+                    <li>AI chat features</li>
+                    <li>Importing YouTube videos</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How long does transcription take?</div>
+            <div class="faq-answer">
+                <p>Transcription time depends on the recording length and your internet speed. Typically:</p>
+                <ul>
+                    <li>Short recordings (5-10 min): 1-2 minutes</li>
+                    <li>Medium recordings (20-30 min): 3-5 minutes</li>
+                    <li>Long recordings (60+ min): 5-10 minutes</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Can I edit the transcript?</div>
+            <div class="faq-answer">
+                <p>Currently, you cannot edit transcripts directly in the app. However, you can:</p>
+                <ul>
+                    <li>Export as text and edit in any text editor</li>
+                    <li>Export as PDF and edit with PDF editing software</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What languages are supported?</div>
+            <div class="faq-answer">
+                <p>aiSummerizer supports 50+ languages including English, Spanish, French, German, Chinese, Japanese, Hindi, and many more. Change your transcription language in Settings.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Can I cancel my free trial?</div>
+            <div class="faq-answer">
+                <p>Yes. Cancel anytime through your App Store or Google Play subscriptions settings. If you cancel during the free trial, you won't be charged.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Will I lose my data if I cancel Pro?</div>
+            <div class="faq-answer">
+                <p>No. All your existing recordings, transcripts, and summaries will remain on your device. However, you will be limited to 3 meetings going forward and won't be able to use Pro-only features like PDF export.</p>
+            </div>
+        </div>
+
+        <h2>Tips & Best Practices</h2>
+
+        <div class="tip">
+            <strong>🎯 For Best Results:</strong>
+            <ul style="margin-top: 10px; margin-bottom: 0;">
+                <li>Record in a quiet room with minimal echo</li>
+                <li>Keep your device within 1-2 meters of speakers</li>
+                <li>Avoid rustling papers or tapping during recording</li>
+                <li>Use calendar integration to auto-name your meetings</li>
+                <li>Export important meetings regularly as backup</li>
+                <li>Review AI summaries for accuracy before sharing</li>
+                <li>Use favorites to mark important meetings for quick access</li>
+            </ul>
+        </div>
+
+        <h2>Privacy & Legal</h2>
+        <p>For information about how we handle your data and your rights:</p>
+        <ul>
+            <li><a href="privacy.html">Privacy Policy</a> - How we collect and use your data</li>
+            <li><a href="terms.html">Terms of Service</a> - Rules and guidelines for using the app</li>
+        </ul>
+
+        <h2>Still Need Help?</h2>
+        <div class="contact-box">
+            <p>If your question wasn't answered above, we're here to help!</p>
+            <p><strong>Email:</strong> <a href="mailto:golukicoding@gmail.com">golukicoding@gmail.com</a></p>
+            <p>Please include:</p>
+            <ul>
+                <li>Your device model and OS version</li>
+                <li>App version (found in Settings)</li>
+                <li>Detailed description of the issue</li>
+                <li>Screenshots if applicable</li>
+            </ul>
+            <a href="mailto:golukicoding@gmail.com?subject=aiSummerizer Support Request&body=Device:%0AOS Version:%0AApp Version:%0A%0ADescription of issue:%0A" class="button">Email Support</a>
+        </div>
+
+        <hr style="margin: 40px 0; border: none; border-top: 1px solid #ddd;">
+
+        <p style="text-align: center; color: #7f8c8d; font-size: 0.9em;">
+            aiSummerizer - Your AI-Powered Meeting Assistant<br>
+            © 2025 All rights reserved.
+        </p>
+    </div>
+</body>
+</html>
