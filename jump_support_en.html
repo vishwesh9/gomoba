@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Jump Rope Counter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0D0D0D;
+            --bg-secondary: #1A1A1A;
+            --bg-card: #242424;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A0A0A0;
+            --accent-gold: #D4AF37;
+            --accent-gold-light: #E8C547;
+            --accent-blue: #2196F3;
+            --border-color: #333333;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .contact-hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .contact-email-hero {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--accent-gold);
+            color: var(--bg-primary);
+            padding: 16px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .contact-email-hero:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+        }
+
+        .response-time {
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        section {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 20px;
+            background: var(--accent-gold);
+            border-radius: 2px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .faq-question h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            flex: 1;
+            padding-right: 16px;
+        }
+
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--bg-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-gold);
+            font-size: 18px;
+            flex-shrink: 0;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer-content {
+            padding: 0 20px 20px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .faq-answer-content ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 12px;
+        }
+
+        .faq-answer-content li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .faq-answer-content li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+        }
+
+        .tip-box {
+            background: linear-gradient(135deg, rgba(33, 150, 243, 0.15) 0%, rgba(33, 150, 243, 0.05) 100%);
+            border: 1px solid rgba(33, 150, 243, 0.3);
+            border-radius: 10px;
+            padding: 14px;
+            margin-top: 12px;
+        }
+
+        .tip-box p {
+            color: var(--accent-blue);
+            margin: 0;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .feature-card h4 {
+            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .modes-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--bg-card);
+            padding: 10px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-primary);
+        }
+
+        .mode-badge.pro {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0.1) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+        }
+
+        .mode-badge .pro-tag {
+            background: var(--accent-gold);
+            color: var(--bg-primary);
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .troubleshoot-steps {
+            counter-reset: step;
+        }
+
+        .troubleshoot-step {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .step-number {
+            width: 32px;
+            height: 32px;
+            background: var(--accent-gold);
+            color: var(--bg-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            color: var(--text-primary);
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .step-content p {
+            font-size: 13px;
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px;
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        footer a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 16px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px 16px 60px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .faq-question h3 {
+                font-size: 14px;
+            }
+
+            .contact-email-hero {
+                font-size: 14px;
+                padding: 14px 24px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🪢</div>
+            <h1>Support Center</h1>
+            <p class="subtitle">Jump Rope Counter - JumpPro</p>
+            <div class="contact-hero">
+                <a href="mailto:golukicoding@gmail.com" class="contact-email-hero">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    golukicoding@gmail.com
+                </a>
+                <p class="response-time">We typically respond within 24-48 hours</p>
+            </div>
+        </header>
+
+        <section>
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>Jump detection isn't working properly. What should I do?</h3>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>If the app isn't detecting your jumps accurately, try these steps:</p>
+                        <ul>
+                            <li><strong>Lighting:</strong> Ensure you're in a well-lit area. The AI needs good lighting to detect your body.</li>
+                            <li><strong>Full Body Visibility:</strong> Make sure your entire body is visible in the camera frame, from head to feet.</li>
+                            <li><strong>Camera Position:</strong> Position your phone at hip height or slightly lower, about 6-10 feet away.</li>
+                            <li><strong>Stable Surface:</strong> Place your phone on a stable surface or use a tripod.</li>
+                            <li><strong>Calibration:</strong> Try recalibrating in Settings > Workout Settings > Recalibrate Detection.</li>
+                        </ul>
+                        <div class="tip-box">
+                            <p>Tip: The app works best when wearing contrasting clothing against your background.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>How do I calibrate the detection for my jumping style?</h3>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Calibration helps the app adapt to your unique jumping style:</p>
+                        <ul>
+                            <li>Go to <strong>Settings > Workout Settings</strong></li>
+                            <li>Tap <strong>Recalibrate Detection</strong></li>
+                            <li>Follow the on-screen instructions to perform a few sample jumps</li>
+                            <li>The app will adjust sensitivity for your height and jumping pattern</li>
+                        </ul>
+                        <p>You can recalibrate anytime if you change your workout space or shoes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>How do I restore my Pro subscription?</h3>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>If you previously purchased Pro and it's not showing up:</p>
+                        <ul>
+                            <li>Open Jump Rope Counter</li>
+                            <li>Go to <strong>Profile > Subscription</strong></li>
+                            <li>Tap <strong>Restore Purchases</strong></li>
+                            <li>Make sure you're signed in with the same Apple ID used for the original purchase</li>
+                        </ul>
+                        <p>If restore doesn't work, please contact us with your purchase receipt.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>How do I cancel my subscription?</h3>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Subscriptions are managed through the App Store:</p>
+                        <ul>
+                            <li>Open <strong>Settings</strong> on your iPhone</li>
+                            <li>Tap your name at the top</li>
+                            <li>Tap <strong>Subscriptions</strong></li>
+                            <li>Find <strong>Jump Rope Counter</strong> and tap it</li>
+                            <li>Tap <strong>Cancel Subscription</strong></li>
+                        </ul>
+                        <p>You'll retain access to Pro features until the end of your billing period.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>Workouts aren't syncing to Apple Health. How do I fix this?</h3>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>To enable Apple Health sync:</p>
+                        <ul>
+                            <li>Open iPhone <strong>Settings > Health > Data Access & Devices</strong></li>
+                            <li>Find <strong>Jump Rope Counter</strong></li>
+                            <li>Enable permissions for <strong>Active Energy</strong></li>
+                        </ul>
+                        <p>If already enabled, try toggling off and on again. Also ensure Health integration is enabled in the app under <strong>Settings > Health Integration</strong>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>How accurate is the calorie calculation?</h3>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Our calorie calculations are estimates based on:</p>
+                        <ul>
+                            <li>Number of jumps completed</li>
+                            <li>Workout duration and intensity</li>
+                            <li>Average metabolic equivalents (METs) for jump rope exercise</li>
+                        </ul>
+                        <p>For more accurate tracking, we recommend using a heart rate monitor paired with Apple Health. Individual factors like weight, fitness level, and jump intensity affect actual calories burned.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>Does the app work without internet?</h3>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Yes! Jump Rope Counter works completely offline:</p>
+                        <ul>
+                            <li>All jump detection happens on your device</li>
+                            <li>Workouts are saved locally</li>
+                            <li>Statistics and achievements work offline</li>
+                        </ul>
+                        <p>Internet is only needed for subscription verification and app updates.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>Why does the app need camera access?</h3>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>The camera is essential for our AI-powered jump detection:</p>
+                        <ul>
+                            <li>The camera captures your movements in real-time</li>
+                            <li>AI analyzes your body position to detect jumps</li>
+                            <li>All processing happens on-device - no video is ever uploaded</li>
+                        </ul>
+                        <p><strong>Your privacy is protected:</strong> We never record, store, or transmit any camera footage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>App Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📹</div>
+                    <h4>AI Detection</h4>
+                    <p>Real-time jump counting using camera-based pose detection</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h4>Statistics</h4>
+                    <p>Track your daily, weekly, and monthly progress</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h4>Achievements</h4>
+                    <p>Unlock badges and maintain workout streaks</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">❤️</div>
+                    <h4>Apple Health</h4>
+                    <p>Sync workouts to your Health app</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Workout Modes</h2>
+            <p>Jump Rope Counter offers multiple ways to work out:</p>
+            <div class="modes-list">
+                <div class="mode-badge">🆓 Free Jump</div>
+                <div class="mode-badge">🎯 Goal Mode</div>
+                <div class="mode-badge">⏱️ Intervals</div>
+                <div class="mode-badge pro">
+                    🔥 HIIT
+                    <span class="pro-tag">PRO</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Quick Troubleshooting</h2>
+            <div class="troubleshoot-steps">
+                <div class="troubleshoot-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Restart the App</h4>
+                        <p>Close the app completely and reopen it. This resolves most temporary issues.</p>
+                    </div>
+                </div>
+                <div class="troubleshoot-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Check Permissions</h4>
+                        <p>Go to Settings > Jump Rope Counter and ensure Camera access is enabled.</p>
+                    </div>
+                </div>
+                <div class="troubleshoot-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Update the App</h4>
+                        <p>Make sure you have the latest version from the App Store.</p>
+                    </div>
+                </div>
+                <div class="troubleshoot-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Contact Support</h4>
+                        <p>If issues persist, email us at golukicoding@gmail.com with details about your problem.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="text-align: center;">
+            <h2>Still Need Help?</h2>
+            <p>We're here to help! Send us an email and we'll get back to you as soon as possible.</p>
+            <a href="mailto:golukicoding@gmail.com" class="contact-email-hero" style="margin-top: 16px; display: inline-flex;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                golukicoding@gmail.com
+            </a>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Jump Rope Counter. All rights reserved.</p>
+            <div class="nav-links">
+                <a href="https://vishwesh9.github.io/gomoba/jump_terms_en.html">Terms of Service</a>
+                <a href="https://vishwesh9.github.io/gomoba/jump_privacy_en.html">Privacy Policy</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const wasActive = faqItem.classList.contains('active');
+
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Open clicked item if it wasn't active
+            if (!wasActive) {
+                faqItem.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
