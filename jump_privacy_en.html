@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Jump Rope Counter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0D0D0D;
+            --bg-secondary: #1A1A1A;
+            --bg-card: #242424;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A0A0A0;
+            --accent-gold: #D4AF37;
+            --accent-gold-light: #E8C547;
+            --accent-green: #4CAF50;
+            --border-color: #333333;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .last-updated {
+            display: inline-block;
+            background: var(--bg-card);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 16px;
+        }
+
+        .privacy-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.2) 0%, rgba(76, 175, 80, 0.1) 100%);
+            border: 1px solid rgba(76, 175, 80, 0.4);
+            padding: 12px 20px;
+            border-radius: 30px;
+            margin-top: 20px;
+            color: var(--accent-green);
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        section {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 20px;
+            background: var(--accent-gold);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 20px 0 12px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            color: var(--text-secondary);
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 16px;
+            width: 8px;
+            height: 8px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 14px 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .data-table th {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .data-table td {
+            color: var(--text-secondary);
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .badge-local {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4CAF50;
+        }
+
+        .badge-optional {
+            background: rgba(33, 150, 243, 0.2);
+            color: #2196F3;
+        }
+
+        .badge-anonymous {
+            background: rgba(156, 39, 176, 0.2);
+            color: #BA68C8;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.15) 0%, rgba(76, 175, 80, 0.05) 100%);
+            border: 1px solid rgba(76, 175, 80, 0.4);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+
+        .highlight-box h4 {
+            color: var(--accent-green);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .highlight-box p {
+            color: var(--text-primary);
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+
+        .info-box p {
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .third-party-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 12px 0;
+        }
+
+        .third-party-card h4 {
+            color: var(--text-primary);
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .third-party-card p {
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .third-party-card a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .third-party-card a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-section {
+            text-align: center;
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+        }
+
+        .contact-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-gold);
+            color: var(--bg-primary);
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .contact-email:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px;
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        footer a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 16px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px 16px 60px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .data-table {
+                font-size: 12px;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 10px 8px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🔒</div>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">Jump Rope Counter - JumpPro</p>
+            <span class="last-updated">Last Updated: January 2025</span>
+            <div class="privacy-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                </svg>
+                Privacy-Focused: Your data stays on your device
+            </div>
+        </header>
+
+        <section>
+            <h2>Our Commitment to Privacy</h2>
+            <p>Jump Rope Counter is designed with privacy as a core principle. We believe your fitness data belongs to you, and we've built our app to ensure your personal information stays private and secure.</p>
+            <div class="highlight-box">
+                <h4>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    Key Privacy Guarantee
+                </h4>
+                <p>Your camera video and pose detection data are processed entirely on your device. We never upload, transmit, or store your video footage or body movement data on any server.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Information We Collect</h2>
+            <p>Here's a complete overview of what data the app accesses and how it's handled:</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Storage</th>
+                        <th>Shared</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Camera/Video</strong><br><small>Used for jump detection</small></td>
+                        <td><span class="badge badge-local">Local Only</span></td>
+                        <td>Never</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pose Data</strong><br><small>AI-detected body positions</small></td>
+                        <td><span class="badge badge-local">Local Only</span></td>
+                        <td>Never</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Workout History</strong><br><small>Reps, duration, calories</small></td>
+                        <td><span class="badge badge-local">Local Only</span></td>
+                        <td>Never</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Health Data</strong><br><small>Calories synced to Apple Health</small></td>
+                        <td><span class="badge badge-optional">Optional</span></td>
+                        <td>Apple HealthKit only</td>
+                    </tr>
+                    <tr>
+                        <td><strong>App Usage</strong><br><small>Screen views, feature usage</small></td>
+                        <td><span class="badge badge-anonymous">Anonymous</span></td>
+                        <td>Firebase Analytics</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Crash Reports</strong><br><small>App errors for debugging</small></td>
+                        <td><span class="badge badge-anonymous">Anonymous</span></td>
+                        <td>Firebase Crashlytics</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Subscription Status</strong><br><small>Pro membership info</small></td>
+                        <td>App Store</td>
+                        <td>RevenueCat</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Camera & Pose Detection</h2>
+            <p>Jump Rope Counter uses your device's camera and AI-powered pose detection to count your jumps. Here's how we protect your privacy:</p>
+            <ul>
+                <li><strong>100% On-Device Processing:</strong> All video frames and pose detection happen locally on your iPhone. No images or video are ever transmitted.</li>
+                <li><strong>No Recording:</strong> We do not record, save, or store any camera footage.</li>
+                <li><strong>Temporary Processing:</strong> Camera frames are analyzed in real-time and immediately discarded after jump detection.</li>
+                <li><strong>No Cloud AI:</strong> Our pose detection runs entirely on your device using MediaPipe technology.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Workout Data Storage</h2>
+            <p>Your workout history and fitness statistics are stored locally on your device:</p>
+            <ul>
+                <li><strong>Local Database:</strong> All workout data is saved in a SQLite database on your device.</li>
+                <li><strong>No Cloud Backup:</strong> We do not upload your workout data to any cloud server.</li>
+                <li><strong>Your Control:</strong> Your data stays on your device and is deleted when you uninstall the app.</li>
+            </ul>
+            <div class="info-box">
+                <p><strong>Note:</strong> If you enable iCloud backup on your device, app data may be included in your personal iCloud backup, which is encrypted and controlled by you through Apple.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Apple HealthKit Integration</h2>
+            <p>If you choose to enable it, Jump Rope Counter can sync workout calories with Apple Health:</p>
+            <ul>
+                <li><strong>Optional:</strong> Health integration is entirely optional and requires your explicit permission.</li>
+                <li><strong>Read Access:</strong> We read active energy data to track your overall fitness.</li>
+                <li><strong>Write Access:</strong> We write workout calories burned during jump rope sessions.</li>
+                <li><strong>Apple's Privacy:</strong> All health data is protected by Apple's strict HealthKit privacy policies.</li>
+            </ul>
+            <p>You can revoke access at any time in Settings > Health > Data Access.</p>
+        </section>
+
+        <section>
+            <h2>Third-Party Services</h2>
+            <p>We use the following third-party services to improve the app:</p>
+
+            <div class="third-party-card">
+                <h4>Firebase Analytics & Crashlytics</h4>
+                <p>We use Firebase for anonymous app analytics and crash reporting. This helps us understand which features are popular and fix bugs. No personal information is collected.</p>
+                <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy →</a>
+            </div>
+
+            <div class="third-party-card">
+                <h4>RevenueCat</h4>
+                <p>We use RevenueCat to manage subscriptions and in-app purchases. RevenueCat processes transactions through the App Store and does not have access to your payment details.</p>
+                <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy →</a>
+            </div>
+
+            <div class="third-party-card">
+                <h4>Apple HealthKit</h4>
+                <p>Optional integration for syncing workout data with Apple Health. All health data is handled according to Apple's strict privacy guidelines.</p>
+                <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy →</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Data Retention</h2>
+            <p>Your data is retained according to the following guidelines:</p>
+            <ul>
+                <li><strong>Workout Data:</strong> Stored locally until you delete the app or clear app data.</li>
+                <li><strong>Settings & Preferences:</strong> Stored locally until you delete the app.</li>
+                <li><strong>Analytics Data:</strong> Retained by Firebase according to their data retention policies (typically 14 months).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Your Rights</h2>
+            <p>You have full control over your data:</p>
+            <ul>
+                <li><strong>Access:</strong> All your workout data is visible within the app.</li>
+                <li><strong>Delete:</strong> Uninstalling the app removes all locally stored data.</li>
+                <li><strong>Health Data:</strong> Manage Apple Health permissions in your device settings.</li>
+                <li><strong>Analytics Opt-Out:</strong> You can limit ad tracking in your iOS settings.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Children's Privacy</h2>
+            <p>Jump Rope Counter is not directed at children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected information from a child, please contact us immediately.</p>
+        </section>
+
+        <section>
+            <h2>Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new policy within the app. Your continued use of the app after such modifications constitutes your acceptance of the updated policy.</p>
+        </section>
+
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+            <a href="mailto:golukicoding@gmail.com" class="contact-email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                golukicoding@gmail.com
+            </a>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Jump Rope Counter. All rights reserved.</p>
+            <div class="nav-links">
+                <a href="https://vishwesh9.github.io/gomoba/jump_terms_en.html">Terms of Service</a>
+                <a href="https://vishwesh9.github.io/gomoba/jump_support_en.html">Support</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
