@@ -13,131 +13,198 @@
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            color: #1a1a2e;
-            line-height: 1.7;
-            background: #f8f9fa;
+            color: #2d3748;
+            line-height: 1.75;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-        .container {
+        .page-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            padding: 48px 24px 40px;
+            text-align: center;
+        }
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: -0.02em;
+        }
+        .page-header .subtitle {
+            font-size: 0.95rem;
+            opacity: 0.7;
+            font-weight: 400;
+        }
+        .page-header time {
+            display: block;
+            font-size: 0.8rem;
+            opacity: 0.5;
+            margin-top: 12px;
+        }
+        .content {
             max-width: 720px;
-            margin: 0 auto;
-            padding: 48px 24px;
+            margin: -20px auto 40px;
+            padding: 36px 32px 40px;
             background: #fff;
-            min-height: 100vh;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
         }
-        header { margin-bottom: 32px; }
-        h1 { font-size: 1.8rem; margin-bottom: 8px; color: #16213e; }
-        .updated { font-size: 0.85rem; color: #6c757d; display: block; }
-        h2 { font-size: 1.2rem; margin-top: 32px; margin-bottom: 10px; color: #16213e; }
-        p, li { margin-bottom: 10px; color: #333; }
+        .intro {
+            font-size: 1.05rem;
+            color: #4a5568;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%);
+            border-left: 4px solid #38a169;
+            padding: 16px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 16px 0 20px;
+        }
+        .highlight-box p { margin-bottom: 0; color: #276749; font-weight: 500; }
+        section {
+            margin-bottom: 28px;
+        }
+        h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #edf2f7;
+        }
+        p { margin-bottom: 10px; }
         ul { padding-left: 20px; margin-bottom: 12px; }
-        a { color: #0f3460; text-decoration: none; }
-        a:hover, a:focus { text-decoration: underline; }
-        a:focus-visible { outline: 2px solid #0f3460; outline-offset: 2px; border-radius: 2px; }
+        li { margin-bottom: 6px; }
+        strong { color: #1a1a2e; }
+        a { color: #4c51bf; text-decoration: none; font-weight: 500; }
+        a:hover, a:focus { color: #667eea; text-decoration: underline; }
+        a:focus-visible { outline: 2px solid #667eea; outline-offset: 2px; border-radius: 2px; }
         footer {
-            border-top: 1px solid #dee2e6;
-            padding-top: 20px;
-            margin-top: 48px;
-            font-size: 0.9rem;
+            max-width: 720px;
+            margin: 0 auto 40px;
+            text-align: center;
         }
-        footer nav a { margin-right: 16px; }
+        footer nav { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+        footer nav a {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            border-radius: 24px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        footer nav a:hover { background: rgba(255,255,255,0.25); text-decoration: none; }
         @media (max-width: 480px) {
-            .container { padding: 32px 16px; }
-            h1 { font-size: 1.5rem; }
+            .page-header { padding: 36px 16px 32px; }
+            .page-header h1 { font-size: 1.6rem; }
+            .content { margin: -16px 12px 32px; padding: 24px 20px 28px; border-radius: 12px; }
+            h2 { font-size: 1rem; }
         }
         @media print {
             body { background: #fff; }
-            .container { padding: 20px; }
+            .page-header { background: #1a1a2e; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .content { box-shadow: none; margin-top: 0; }
+            footer nav a { background: #eee; color: #333; }
             a[href]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Privacy Policy</h1>
-            <time class="updated" datetime="2026-03-22">Last updated: 22 March 2026</time>
-        </header>
-
-        <main>
-            <p>SQE Master (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our mobile application (&ldquo;App&rdquo;).</p>
-
-            <section aria-labelledby="info-collect">
-                <h2 id="info-collect">1. Information We Collect</h2>
-                <p>SQE Master does <strong>not</strong> collect, store, or transmit any personal information. Specifically:</p>
-                <ul>
-                    <li>We do not collect your name, email address, or any contact details.</li>
-                    <li>We do not use analytics, advertising SDKs, or tracking technologies.</li>
-                    <li>We do not track your location, device identifiers, or browsing activity.</li>
-                </ul>
-                <p>All your study data (flashcards, quiz scores, bookmarks, progress) is stored <strong>locally on your device only</strong> using on-device storage (SQLite and AsyncStorage). This data never leaves your device.</p>
-            </section>
-
-            <section aria-labelledby="no-accounts">
-                <h2 id="no-accounts">2. No User Accounts</h2>
-                <p>SQE Master does not require you to create an account. There is no registration, login, or user profile. The App is fully anonymous.</p>
-            </section>
-
-            <section aria-labelledby="subscriptions">
-                <h2 id="subscriptions">3. Subscriptions and Payments</h2>
-                <p>We offer optional subscriptions managed through Apple&rsquo;s In-App Purchase system:</p>
-                <ul>
-                    <li>Weekly subscription with a 3-day free trial</li>
-                    <li>Annual subscription</li>
-                </ul>
-                <p>Payment and subscription management is handled entirely by Apple. We do not have access to your payment details. Apple&rsquo;s own <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> governs the information they process for purchases.</p>
-            </section>
-
-            <section aria-labelledby="third-party">
-                <h2 id="third-party">4. Third-Party Service: RevenueCat</h2>
-                <p>We use <strong>RevenueCat</strong> solely to manage subscription status (e.g., whether your subscription is active, expired, or in a free trial). RevenueCat receives only anonymised subscription identifiers provided by Apple. We do not share any personal data with RevenueCat.</p>
-                <p>RevenueCat&rsquo;s Privacy Policy: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">revenuecat.com/privacy</a></p>
-            </section>
-
-            <section aria-labelledby="data-sharing">
-                <h2 id="data-sharing">5. Data Sharing</h2>
-                <p>We do <strong>not</strong> share, sell, rent, or distribute any user data to any third parties, except as described in Section&nbsp;4 for subscription management.</p>
-            </section>
-
-            <section aria-labelledby="security">
-                <h2 id="security">6. Data Security</h2>
-                <p>Because all study data is stored locally on your device and we do not operate servers that hold user data, the security of your information is managed by your device&rsquo;s built-in protections (passcode, encryption, etc.).</p>
-            </section>
-
-            <section aria-labelledby="children">
-                <h2 id="children">7. Children&rsquo;s Privacy</h2>
-                <p>SQE Master is not directed at children under 13. We do not knowingly collect information from children. If you believe a child has provided us with personal data, please contact us and we will take steps to remove it.</p>
-            </section>
-
-            <section aria-labelledby="gdpr">
-                <h2 id="gdpr">8. Your Rights (GDPR &amp; UK GDPR)</h2>
-                <p>Since we do not collect any personal data, there is no personal data to access, rectify, erase, or port. If you have concerns about your data rights, please contact us at the address below.</p>
-            </section>
-
-            <section aria-labelledby="retention">
-                <h2 id="retention">9. Data Retention</h2>
-                <p>All data stored on your device is controlled entirely by you. You can delete it at any time by uninstalling the App or using the in-app reset options.</p>
-            </section>
-
-            <section aria-labelledby="changes">
-                <h2 id="changes">10. Changes to This Policy</h2>
-                <p>We may update this Privacy Policy from time to time. Any changes will be reflected by updating the &ldquo;Last updated&rdquo; date at the top of this page. Continued use of the App after changes are posted constitutes acceptance of the revised policy.</p>
-            </section>
-
-            <section aria-labelledby="contact">
-                <h2 id="contact">11. Contact Us</h2>
-                <p>If you have questions or concerns about this Privacy Policy, please contact us at:</p>
-                <p><a href="mailto:golukicoding@gmail.com">golukicoding@gmail.com</a></p>
-            </section>
-        </main>
-
-        <footer>
-            <nav aria-label="Legal pages">
-                <a href="terms-of-service.html">Terms of Service</a>
-                <a href="support.html">Support</a>
-            </nav>
-        </footer>
+    <div class="page-header">
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">SQE Master</p>
+        <time datetime="2026-03-22">Last updated: 22 March 2026</time>
     </div>
+
+    <main class="content">
+        <p class="intro">SQE Master (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our mobile application (&ldquo;App&rdquo;).</p>
+
+        <div class="highlight-box">
+            <p>SQE Master collects no personal data. All your study data stays on your device.</p>
+        </div>
+
+        <section aria-labelledby="info-collect">
+            <h2 id="info-collect">1. Information We Collect</h2>
+            <p>SQE Master does <strong>not</strong> collect, store, or transmit any personal information. Specifically:</p>
+            <ul>
+                <li>We do not collect your name, email address, or any contact details.</li>
+                <li>We do not use analytics, advertising SDKs, or tracking technologies.</li>
+                <li>We do not track your location, device identifiers, or browsing activity.</li>
+            </ul>
+            <p>All your study data (flashcards, quiz scores, bookmarks, progress) is stored <strong>locally on your device only</strong> using on-device storage (SQLite and AsyncStorage). This data never leaves your device.</p>
+        </section>
+
+        <section aria-labelledby="no-accounts">
+            <h2 id="no-accounts">2. No User Accounts</h2>
+            <p>SQE Master does not require you to create an account. There is no registration, login, or user profile. The App is fully anonymous.</p>
+        </section>
+
+        <section aria-labelledby="subscriptions">
+            <h2 id="subscriptions">3. Subscriptions and Payments</h2>
+            <p>We offer optional subscriptions managed through Apple&rsquo;s In-App Purchase system:</p>
+            <ul>
+                <li>Weekly subscription with a 3-day free trial</li>
+                <li>Annual subscription</li>
+            </ul>
+            <p>Payment and subscription management is handled entirely by Apple. We do not have access to your payment details. Apple&rsquo;s own <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> governs the information they process for purchases.</p>
+        </section>
+
+        <section aria-labelledby="third-party">
+            <h2 id="third-party">4. Third-Party Service: RevenueCat</h2>
+            <p>We use <strong>RevenueCat</strong> solely to manage subscription status (e.g., whether your subscription is active, expired, or in a free trial). RevenueCat receives only anonymised subscription identifiers provided by Apple. We do not share any personal data with RevenueCat.</p>
+            <p>RevenueCat&rsquo;s Privacy Policy: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">revenuecat.com/privacy</a></p>
+        </section>
+
+        <section aria-labelledby="data-sharing">
+            <h2 id="data-sharing">5. Data Sharing</h2>
+            <p>We do <strong>not</strong> share, sell, rent, or distribute any user data to any third parties, except as described in Section&nbsp;4 for subscription management.</p>
+        </section>
+
+        <section aria-labelledby="security">
+            <h2 id="security">6. Data Security</h2>
+            <p>Because all study data is stored locally on your device and we do not operate servers that hold user data, the security of your information is managed by your device&rsquo;s built-in protections (passcode, encryption, etc.).</p>
+        </section>
+
+        <section aria-labelledby="children">
+            <h2 id="children">7. Children&rsquo;s Privacy</h2>
+            <p>SQE Master is not directed at children under 13. We do not knowingly collect information from children. If you believe a child has provided us with personal data, please contact us and we will take steps to remove it.</p>
+        </section>
+
+        <section aria-labelledby="gdpr">
+            <h2 id="gdpr">8. Your Rights (GDPR &amp; UK GDPR)</h2>
+            <p>Since we do not collect any personal data, there is no personal data to access, rectify, erase, or port. If you have concerns about your data rights, please contact us at the address below.</p>
+        </section>
+
+        <section aria-labelledby="retention">
+            <h2 id="retention">9. Data Retention</h2>
+            <p>All data stored on your device is controlled entirely by you. You can delete it at any time by uninstalling the App or using the in-app reset options.</p>
+        </section>
+
+        <section aria-labelledby="changes">
+            <h2 id="changes">10. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Any changes will be reflected by updating the &ldquo;Last updated&rdquo; date at the top of this page. Continued use of the App after changes are posted constitutes acceptance of the revised policy.</p>
+        </section>
+
+        <section aria-labelledby="contact">
+            <h2 id="contact">11. Contact Us</h2>
+            <p>If you have questions or concerns about this Privacy Policy, please contact us at:</p>
+            <p><a href="mailto:golukicoding@gmail.com">golukicoding@gmail.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <nav aria-label="Legal pages">
+            <a href="https://vishwesh9.github.io/gomoba/sqe_terms_en.html">Terms of Service</a>
+            <a href="https://vishwesh9.github.io/gomoba/sqe_support_en.html">Support</a>
+        </nav>
+    </footer>
 </body>
 </html>
