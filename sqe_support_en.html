@@ -4,69 +4,255 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support — SQE Master</title>
+    <meta name="description" content="Get help with SQE Master. Contact us via email for subscription issues, technical support, content feedback, or feature requests.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Support — SQE Master">
+    <meta property="og:description" content="Get help with the SQE Master exam preparation app.">
+    <meta property="og:type" content="website">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #1a1a2e; line-height: 1.7; background: #f8f9fa; }
-        .container { max-width: 720px; margin: 0 auto; padding: 40px 20px; background: #fff; min-height: 100vh; }
-        h1 { font-size: 1.8rem; margin-bottom: 8px; color: #16213e; }
-        .updated { font-size: 0.85rem; color: #6c757d; margin-bottom: 32px; }
-        h2 { font-size: 1.2rem; margin-top: 28px; margin-bottom: 10px; color: #16213e; }
-        p, li { margin-bottom: 10px; color: #333; }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #2d3748;
+            line-height: 1.75;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .page-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            padding: 48px 24px 40px;
+            text-align: center;
+        }
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: -0.02em;
+        }
+        .page-header .subtitle {
+            font-size: 0.95rem;
+            opacity: 0.7;
+            font-weight: 400;
+        }
+        .page-header time {
+            display: block;
+            font-size: 0.8rem;
+            opacity: 0.5;
+            margin-top: 12px;
+        }
+        .content {
+            max-width: 720px;
+            margin: -20px auto 40px;
+            padding: 36px 32px 40px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+        .intro {
+            font-size: 1.05rem;
+            color: #4a5568;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .contact-card {
+            background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+            border: 1px solid #c7d2fe;
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 20px 0 28px;
+            text-align: center;
+        }
+        .contact-card p { margin-bottom: 8px; color: #4a5568; }
+        .contact-card .email-link {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #4c51bf;
+            display: inline-block;
+            padding: 10px 28px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(76,81,191,0.15);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .contact-card .email-link:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(76,81,191,0.2);
+            text-decoration: none;
+        }
+        .contact-card .response-time {
+            font-size: 0.85rem;
+            color: #718096;
+            margin-top: 12px;
+            margin-bottom: 0;
+        }
+        section {
+            margin-bottom: 28px;
+        }
+        h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #edf2f7;
+        }
+        p { margin-bottom: 10px; }
         ul { padding-left: 20px; margin-bottom: 12px; }
-        a { color: #0f3460; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .contact-box { background: #f0f4ff; border-left: 4px solid #0f3460; padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; }
-        .contact-box p { margin-bottom: 4px; }
-        .contact-box a { font-size: 1.1rem; font-weight: 600; }
-        nav { border-top: 1px solid #dee2e6; padding-top: 20px; margin-top: 40px; font-size: 0.9rem; }
-        nav a { margin-right: 16px; }
-        @media print { body { background: #fff; } .container { padding: 20px; } }
+        li { margin-bottom: 6px; }
+        strong { color: #1a1a2e; }
+        a { color: #4c51bf; text-decoration: none; font-weight: 500; }
+        a:hover, a:focus { color: #667eea; text-decoration: underline; }
+        a:focus-visible { outline: 2px solid #667eea; outline-offset: 2px; border-radius: 2px; }
+        .faq-item {
+            background: #f7fafc;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            border: 1px solid #e2e8f0;
+            transition: border-color 0.2s;
+        }
+        .faq-item:hover { border-color: #cbd5e0; }
+        .faq-item h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 6px;
+        }
+        .faq-item p { margin-bottom: 0; font-size: 0.93rem; color: #4a5568; }
+        .steps-box {
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin: 12px 0;
+        }
+        .steps-box ul { margin-bottom: 0; }
+        .steps-box li { color: #92400e; }
+        footer {
+            max-width: 720px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+        footer nav { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+        footer nav a {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            border-radius: 24px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        footer nav a:hover { background: rgba(255,255,255,0.25); text-decoration: none; }
+        @media (max-width: 480px) {
+            .page-header { padding: 36px 16px 32px; }
+            .page-header h1 { font-size: 1.6rem; }
+            .content { margin: -16px 12px 32px; padding: 24px 20px 28px; border-radius: 12px; }
+            .contact-card { padding: 20px 16px; }
+            .contact-card .email-link { font-size: 1rem; padding: 8px 20px; }
+            h2 { font-size: 1rem; }
+        }
+        @media print {
+            body { background: #fff; }
+            .page-header { background: #1a1a2e; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .content { box-shadow: none; margin-top: 0; }
+            footer nav a { background: #eee; color: #333; }
+            a[href]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="page-header">
         <h1>Support</h1>
-        <p class="updated">Last updated: 22 March 2026</p>
-
-        <p>Welcome to the SQE Master support page. If you need help, please get in touch using the contact details below.</p>
-
-        <h2>Contact Us</h2>
-        <div class="contact-box">
-            <p>The best way to reach us is by email:</p>
-            <p><a href="mailto:golukicoding@gmail.com">golukicoding@gmail.com</a></p>
-        </div>
-
-        <h2>Response Time</h2>
-        <p>We aim to respond to all enquiries within 48 hours (usually sooner).</p>
-
-        <h2>Common Topics</h2>
-        <ul>
-            <li><strong>Subscription issues</strong> — problems with payment, free trials, or access</li>
-            <li><strong>Technical issues</strong> — app crashes, bugs, or display problems</li>
-            <li><strong>Content feedback</strong> — corrections, suggestions, or questions about study materials</li>
-            <li><strong>Feature requests</strong> — ideas for new features or improvements</li>
-            <li><strong>General questions</strong> — anything else related to SQE Master</li>
-        </ul>
-
-        <h2>Tips for a Faster Response</h2>
-        <p>To help us resolve your issue quickly, please include:</p>
-        <ul>
-            <li>Your device model and iOS version</li>
-            <li>A description of the problem and steps to reproduce it</li>
-            <li>Screenshots if applicable</li>
-        </ul>
-
-        <h2>Managing Your Subscription</h2>
-        <p>Subscription management (including cancellation and refund requests) is handled by Apple. You can manage your subscription at any time through:</p>
-        <ul>
-            <li><strong>iPhone/iPad:</strong> Settings &rarr; your name &rarr; Subscriptions</li>
-            <li><strong>Apple ID account:</strong> <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">apple.com/account/subscriptions</a></li>
-        </ul>
-
-        <nav>
-            <a href="privacy-policy.html">Privacy Policy</a>
-            <a href="terms-of-service.html">Terms of Service</a>
-        </nav>
+        <p class="subtitle">SQE Master</p>
+        <time datetime="2026-03-22">Last updated: 22 March 2026</time>
     </div>
+
+    <main class="content">
+        <p class="intro">Need help with SQE Master? We&rsquo;re here to assist.</p>
+
+        <section aria-labelledby="contact">
+            <h2 id="contact">Contact Us</h2>
+            <div class="contact-card" role="region" aria-label="Contact information">
+                <p>The quickest way to reach us is by email:</p>
+                <a class="email-link" href="mailto:golukicoding@gmail.com">golukicoding@gmail.com</a>
+                <p class="response-time">We typically respond within 48 hours</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="help-topics">
+            <h2 id="help-topics">What We Can Help With</h2>
+            <ul>
+                <li><strong>Subscription issues</strong> &mdash; problems with payment, free trials, or premium access</li>
+                <li><strong>Technical issues</strong> &mdash; app crashes, bugs, or display problems</li>
+                <li><strong>Content feedback</strong> &mdash; corrections, suggestions, or questions about study materials</li>
+                <li><strong>Feature requests</strong> &mdash; ideas for new features or improvements</li>
+                <li><strong>General questions</strong> &mdash; anything else related to SQE Master</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="faster-response">
+            <h2 id="faster-response">Tips for a Faster Response</h2>
+            <p>To help us resolve your issue quickly, please include:</p>
+            <div class="steps-box">
+                <ul>
+                    <li>Your device model and iOS version</li>
+                    <li>A clear description of the issue and steps to reproduce it</li>
+                    <li>Screenshots, if applicable</li>
+                </ul>
+            </div>
+        </section>
+
+        <section aria-labelledby="faq">
+            <h2 id="faq">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>How do I cancel my subscription?</h3>
+                <p>Subscriptions are managed by Apple. Go to <strong>Settings &rarr; your name &rarr; Subscriptions</strong> on your iPhone or iPad, or visit <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener noreferrer">apple.com/account/subscriptions</a>.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I request a refund?</h3>
+                <p>Refunds are handled by Apple. Visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer">reportaproblem.apple.com</a> to request a refund for any purchase.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Does the app work offline?</h3>
+                <p>Yes. SQE Master works 100% offline. All study content is included in the app download.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Will I lose my progress if I delete the app?</h3>
+                <p>Yes. All study data is stored locally on your device. Uninstalling the app will remove your progress, bookmarks, and quiz history.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>I subscribed but still see locked content.</h3>
+                <p>Try closing and reopening the app. If the issue persists, go to the subscription screen and tap &ldquo;Restore Purchases&rdquo;. If it still doesn&rsquo;t work, email us.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="manage-sub">
+            <h2 id="manage-sub">Managing Your Subscription</h2>
+            <p>All subscription management (including cancellation) is handled through Apple:</p>
+            <ul>
+                <li><strong>iPhone / iPad:</strong> Settings &rarr; your name &rarr; Subscriptions</li>
+                <li><strong>Online:</strong> <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener noreferrer">apple.com/account/subscriptions</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <nav aria-label="Legal pages">
+            <a href="https://vishwesh9.github.io/gomoba/sqe_privacy_en.html">Privacy Policy</a>
+            <a href="https://vishwesh9.github.io/gomoba/sqe_terms_en.html">Terms of Service</a>
+        </nav>
+    </footer>
 </body>
 </html>
