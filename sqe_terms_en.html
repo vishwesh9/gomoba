@@ -4,83 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service — SQE Master</title>
+    <meta name="description" content="Terms of Service for SQE Master, the SQE1 exam preparation app. Read our terms covering subscriptions, content usage, and user responsibilities.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Terms of Service — SQE Master">
+    <meta property="og:description" content="Terms of Service for the SQE Master exam preparation app.">
+    <meta property="og:type" content="website">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #1a1a2e; line-height: 1.7; background: #f8f9fa; }
-        .container { max-width: 720px; margin: 0 auto; padding: 40px 20px; background: #fff; min-height: 100vh; }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #1a1a2e;
+            line-height: 1.7;
+            background: #f8f9fa;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 48px 24px;
+            background: #fff;
+            min-height: 100vh;
+        }
+        header { margin-bottom: 32px; }
         h1 { font-size: 1.8rem; margin-bottom: 8px; color: #16213e; }
-        .updated { font-size: 0.85rem; color: #6c757d; margin-bottom: 32px; }
-        h2 { font-size: 1.2rem; margin-top: 28px; margin-bottom: 10px; color: #16213e; }
+        .updated { font-size: 0.85rem; color: #6c757d; display: block; }
+        h2 { font-size: 1.2rem; margin-top: 32px; margin-bottom: 10px; color: #16213e; }
         p, li { margin-bottom: 10px; color: #333; }
         ul, ol { padding-left: 20px; margin-bottom: 12px; }
         a { color: #0f3460; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        nav { border-top: 1px solid #dee2e6; padding-top: 20px; margin-top: 40px; font-size: 0.9rem; }
-        nav a { margin-right: 16px; }
-        @media print { body { background: #fff; } .container { padding: 20px; } }
+        a:hover, a:focus { text-decoration: underline; }
+        a:focus-visible { outline: 2px solid #0f3460; outline-offset: 2px; border-radius: 2px; }
+        footer {
+            border-top: 1px solid #dee2e6;
+            padding-top: 20px;
+            margin-top: 48px;
+            font-size: 0.9rem;
+        }
+        footer nav a { margin-right: 16px; }
+        @media (max-width: 480px) {
+            .container { padding: 32px 16px; }
+            h1 { font-size: 1.5rem; }
+        }
+        @media print {
+            body { background: #fff; }
+            .container { padding: 20px; }
+            a[href]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Terms of Service</h1>
-        <p class="updated">Last updated: 22 March 2026</p>
+        <header>
+            <h1>Terms of Service</h1>
+            <time class="updated" datetime="2026-03-22">Last updated: 22 March 2026</time>
+        </header>
 
-        <p>These Terms of Service ("Terms") govern your use of the SQE Master mobile application ("App"). By using the App, you agree to these Terms.</p>
+        <main>
+            <p>These Terms of Service (&ldquo;Terms&rdquo;) govern your use of the SQE Master mobile application (&ldquo;App&rdquo;). By using the App you agree to these Terms.</p>
 
-        <h2>1. Acceptance of Terms</h2>
-        <p>By downloading, installing, or using SQE Master, you agree to be bound by these Terms. If you do not agree, do not use the App.</p>
+            <section aria-labelledby="acceptance">
+                <h2 id="acceptance">1. Acceptance of Terms</h2>
+                <p>By downloading, installing, or using SQE Master you agree to be bound by these Terms. If you do not agree, do not use the App.</p>
+            </section>
 
-        <h2>2. Description of Service</h2>
-        <p>SQE Master is a study aid application designed to help users prepare for the Solicitors Qualifying Examination (SQE). It provides flashcards, quizzes, practice exams, and progress tracking. All content is for educational purposes only.</p>
+            <section aria-labelledby="service">
+                <h2 id="service">2. Description of Service</h2>
+                <p>SQE Master is a study-aid application designed to help users prepare for the Solicitors Qualifying Examination (SQE). It provides flashcards, quizzes, practice exams, and progress tracking. All content is for educational purposes only and is not a substitute for official SQE preparation materials or legal advice.</p>
+            </section>
 
-        <h2>3. User Eligibility</h2>
-        <p>You must be at least 13 years old to use this App. By using the App, you represent that you meet this requirement.</p>
+            <section aria-labelledby="eligibility">
+                <h2 id="eligibility">3. User Eligibility</h2>
+                <p>You must be at least 13 years old to use this App. By using the App you represent that you meet this requirement.</p>
+            </section>
 
-        <h2>4. Subscriptions and Payments</h2>
-        <p>The App offers optional premium subscriptions:</p>
-        <ul>
-            <li><strong>Weekly subscription</strong> with a 3-day free trial</li>
-            <li><strong>Annual subscription</strong></li>
-        </ul>
-        <p>Subscriptions are billed through Apple's In-App Purchase system and are subject to Apple's own terms and refund policies.</p>
-        <p><strong>Free trial:</strong> Your subscription will automatically begin at the end of the free trial period unless you cancel at least 24 hours before it expires. You can manage or cancel your subscription at any time through your Apple ID settings.</p>
-        <p><strong>Auto-renewal:</strong> Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current billing period.</p>
+            <section aria-labelledby="subscriptions">
+                <h2 id="subscriptions">4. Subscriptions and Payments</h2>
+                <p>The App offers optional premium subscriptions:</p>
+                <ul>
+                    <li><strong>Weekly subscription</strong> with a 3-day free trial</li>
+                    <li><strong>Annual subscription</strong></li>
+                </ul>
+                <p>Subscriptions are billed through Apple&rsquo;s In-App Purchase system and are subject to Apple&rsquo;s own terms and refund policies.</p>
+                <p><strong>Free trial:</strong> Your subscription begins automatically at the end of the free-trial period unless you cancel at least 24&nbsp;hours before it expires. You can manage or cancel your subscription at any time through your Apple&nbsp;ID settings.</p>
+                <p><strong>Auto-renewal:</strong> Subscriptions renew automatically unless cancelled at least 24&nbsp;hours before the end of the current billing period. The renewal charge is the same as the original subscription price.</p>
+            </section>
 
-        <h2>5. Content Accuracy</h2>
-        <p>The study materials provided in SQE Master are prepared for general educational purposes. While we strive for accuracy, we do not guarantee that the content is complete, up-to-date, or free from errors. SQE Master is not a substitute for official SQE preparation materials or legal advice.</p>
+            <section aria-labelledby="accuracy">
+                <h2 id="accuracy">5. Content Accuracy</h2>
+                <p>While we strive for accuracy, we do not guarantee that the content is complete, current, or free from errors. SQE Master is not a substitute for professional legal advice or official SRA preparation materials.</p>
+            </section>
 
-        <h2>6. User Responsibilities</h2>
-        <p>You agree not to:</p>
-        <ul>
-            <li>Copy, redistribute, or resell the App or its content</li>
-            <li>Reverse engineer, decompile, or modify the App</li>
-            <li>Use the App for any unlawful purpose</li>
-            <li>Attempt to circumvent subscription payments</li>
-        </ul>
+            <section aria-labelledby="responsibilities">
+                <h2 id="responsibilities">6. User Responsibilities</h2>
+                <p>You agree not to:</p>
+                <ul>
+                    <li>Copy, redistribute, or resell the App or its content</li>
+                    <li>Reverse-engineer, decompile, or modify the App</li>
+                    <li>Use the App for any unlawful purpose</li>
+                    <li>Attempt to circumvent subscription payments or access controls</li>
+                </ul>
+            </section>
 
-        <h2>7. Intellectual Property</h2>
-        <p>All content, design, and code within SQE Master are the intellectual property of SQE Master and are protected by applicable copyright and intellectual property laws.</p>
+            <section aria-labelledby="ip">
+                <h2 id="ip">7. Intellectual Property</h2>
+                <p>All content, design, and code within SQE Master are the intellectual property of SQE Master and are protected by applicable copyright and intellectual-property laws. Nothing in these Terms grants you any right to use the SQE Master name, logos, or trademarks.</p>
+            </section>
 
-        <h2>8. Disclaimer of Warranties</h2>
-        <p>SQE Master is provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+            <section aria-labelledby="warranties">
+                <h2 id="warranties">8. Disclaimer of Warranties</h2>
+                <p>SQE Master is provided &ldquo;as is&rdquo; and &ldquo;as available&rdquo; without warranties of any kind, whether express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+            </section>
 
-        <h2>9. Limitation of Liability</h2>
-        <p>To the fullest extent permitted by law, SQE Master shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the App.</p>
+            <section aria-labelledby="liability">
+                <h2 id="liability">9. Limitation of Liability</h2>
+                <p>To the fullest extent permitted by law, SQE Master shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the App, including but not limited to loss of data, revenue, or anticipated savings.</p>
+            </section>
 
-        <h2>10. Changes to These Terms</h2>
-        <p>We may update these Terms from time to time. Continued use of the App after changes are posted constitutes acceptance of the revised Terms.</p>
+            <section aria-labelledby="termination">
+                <h2 id="termination">10. Termination</h2>
+                <p>We reserve the right to suspend or terminate your access to the App at any time if you breach these Terms. Upon termination, your right to use the App ceases immediately.</p>
+            </section>
 
-        <h2>11. Governing Law</h2>
-        <p>These Terms are governed by and construed in accordance with the laws of England and Wales.</p>
+            <section aria-labelledby="changes">
+                <h2 id="changes">11. Changes to These Terms</h2>
+                <p>We may update these Terms from time to time. The &ldquo;Last updated&rdquo; date at the top of this page reflects the most recent revision. Continued use of the App after changes are posted constitutes acceptance of the revised Terms.</p>
+            </section>
 
-        <h2>12. Contact Us</h2>
-        <p>If you have questions about these Terms, please contact us at:</p>
-        <p><a href="mailto:golukicoding@gmail.com">golukicoding@gmail.com</a></p>
+            <section aria-labelledby="governing-law">
+                <h2 id="governing-law">12. Governing Law</h2>
+                <p>These Terms are governed by and construed in accordance with the laws of England and Wales. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+            </section>
 
-        <nav>
-            <a href="privacy-policy.html">Privacy Policy</a>
-            <a href="support.html">Support</a>
-        </nav>
+            <section aria-labelledby="contact">
+                <h2 id="contact">13. Contact Us</h2>
+                <p>If you have questions about these Terms, please contact us at:</p>
+                <p><a href="mailto:golukicoding@gmail.com">golukicoding@gmail.com</a></p>
+            </section>
+        </main>
+
+        <footer>
+            <nav aria-label="Legal pages">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="support.html">Support</a>
+            </nav>
+        </footer>
     </div>
 </body>
 </html>
