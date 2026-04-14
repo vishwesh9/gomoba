@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support — MLA Prep</title>
+  <meta name="description" content="Support and contact for MLA Prep, a UKMLA exam preparation app." />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f6f7f9;
+      --border: #e5e7eb;
+      --text: #111827;
+      --muted: #6b7280;
+      --primary: #1b4fd8;
+      --primary-bg: #ebf3ff;
+      --success: #16a34a;
+      --success-bg: #dcfce7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0a0a0f;
+        --surface: #18181f;
+        --border: #2d2d3a;
+        --text: #f9fafb;
+        --muted: #9ca3af;
+        --primary: #4b7bec;
+        --primary-bg: #1a1f3a;
+        --success: #22c55e;
+        --success-bg: #14291f;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+    }
+    header {
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--primary);
+      background: var(--primary-bg);
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 32px;
+      margin: 0 0 8px;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 16px;
+      margin: 0;
+    }
+    h2 {
+      font-size: 20px;
+      margin: 40px 0 12px;
+      letter-spacing: -0.3px;
+    }
+    h3 {
+      font-size: 16px;
+      margin: 24px 0 6px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .contact-card {
+      background: var(--primary-bg);
+      border: 1px solid var(--primary);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 24px 0;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .contact-card .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 22px;
+    }
+    .contact-card .label {
+      font-size: 13px;
+      color: var(--primary);
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 0 0 2px;
+    }
+    .contact-card .email {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 0;
+      word-break: break-all;
+    }
+    .contact-card .email a { color: var(--text); }
+    .faq {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 4px 20px;
+      margin: 16px 0;
+    }
+    .faq details {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .faq details:last-child { border-bottom: none; }
+    .faq summary {
+      cursor: pointer;
+      font-weight: 600;
+      list-style: none;
+      position: relative;
+      padding-right: 24px;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: "+";
+      position: absolute;
+      right: 4px;
+      top: -2px;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--muted);
+      transition: transform 0.15s ease;
+    }
+    .faq details[open] summary::after {
+      content: "−";
+    }
+    .faq details p {
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+    .response-note {
+      font-size: 14px;
+      color: var(--muted);
+      font-style: italic;
+      margin-top: 8px;
+    }
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="eyebrow">MLA Prep</span>
+    <h1>Support</h1>
+    <p class="subtitle">Help, bug reports, and feedback — we read every email.</p>
+  </header>
+
+  <div class="contact-card">
+    <div class="icon">@</div>
+    <div>
+      <p class="label">Contact</p>
+      <p class="email"><a href="mailto:golukicoding@gmail.com">golukicoding@gmail.com</a></p>
+    </div>
+  </div>
+
+  <p class="response-note">Typical response time: within 2&ndash;3 business days. Please include your app version (shown in Settings) and your device model to help us help you faster.</p>
+
+  <h2>What to contact us about</h2>
+  <ul>
+    <li><strong>Bug reports</strong> — crashes, unexpected behaviour, display problems, missing content.</li>
+    <li><strong>Content issues</strong> — suspected clinical inaccuracies, typos, or out-of-date references.</li>
+    <li><strong>Feature requests</strong> — ideas that would make your revision easier.</li>
+    <li><strong>Subscription and purchase questions</strong> — access problems, restore issues, receipts.</li>
+    <li><strong>Privacy, data, or legal requests</strong> — any question covered in our <a href="./privacy.html">Privacy Policy</a> or <a href="./terms.html">Terms of Use</a>.</li>
+  </ul>
+
+  <h2>Frequently asked questions</h2>
+
+  <div class="faq">
+    <details>
+      <summary>Is MLA Prep affiliated with the GMC or any UK medical school?</summary>
+      <p>No. MLA Prep is an independent educational study aid. It is not endorsed by or connected to the General Medical Council, any UK medical school, NICE, or the BNF. Content is written and maintained by the app's own team.</p>
+    </details>
+
+    <details>
+      <summary>Can I use MLA Prep for clinical decisions?</summary>
+      <p>No. The app is for exam revision only. It must not be used to diagnose, treat, or manage any patient. Always verify clinical information against current NICE guidance, the BNF, local guidelines, and a qualified clinician.</p>
+    </details>
+
+    <details>
+      <summary>Do I need an account?</summary>
+      <p>No. The app does not require sign-up or login. All your progress is stored locally on your device.</p>
+    </details>
+
+    <details>
+      <summary>How do I restore my subscription on a new device?</summary>
+      <p>Open the app, go to Settings, and tap "Restore Purchases". Make sure you are signed in to the same Apple ID or Google Account that you used to subscribe. If restore still fails, email us with your purchase receipt and we will help.</p>
+    </details>
+
+    <details>
+      <summary>How do I cancel my subscription?</summary>
+      <p>Subscriptions are managed by the app store that processed your purchase. On iOS: <em>Settings &rarr; [your name] &rarr; Subscriptions &rarr; MLA Prep</em>. On Android: <em>Google Play &rarr; Profile &rarr; Payments &amp; subscriptions &rarr; Subscriptions &rarr; MLA Prep</em>. We cannot cancel or refund subscriptions on your behalf.</p>
+    </details>
+
+    <details>
+      <summary>How do I request a refund?</summary>
+      <p>Refunds are issued by the app store that processed your payment, not by us. On iOS, use Apple's <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">Report a Problem</a> page. On Android, use Google Play's refund request form. If you need help with the wording of a refund request, email us.</p>
+    </details>
+
+    <details>
+      <summary>How do I delete all my data?</summary>
+      <p>Open the app, go to <em>Settings &rarr; Reset All Progress</em>. This permanently clears all your attempts, flashcard reviews, streaks, and mock-exam results from your device. You can also uninstall the app to remove everything. For purchase metadata held by our payment processor, email us.</p>
+    </details>
+
+    <details>
+      <summary>I think a question or note is wrong. What should I do?</summary>
+      <p>Please email us the exact question or topic name, the issue you spotted, and if possible a reference (NICE, BNF, or textbook). Content-accuracy reports are reviewed and corrected in the next content release.</p>
+    </details>
+
+    <details>
+      <summary>Which devices are supported?</summary>
+      <p>MLA Prep runs on iPhone, iPad, and Android phones and tablets on current OS versions. If you encounter a display issue on a specific device, include the model name in your email.</p>
+    </details>
+
+    <details>
+      <summary>Will the app work offline?</summary>
+      <p>Yes. Once installed, notes, flashcards, and practice questions work entirely offline. An internet connection is only needed to restore purchases or verify subscriptions.</p>
+    </details>
+
+    <details>
+      <summary>Do you collect analytics?</summary>
+      <p>No. We do not run any analytics, tracking, or advertising SDKs. See our <a href="./privacy.html">Privacy Policy</a> for the full list of what is and isn't collected.</p>
+    </details>
+  </div>
+
+  <h2>Reporting a clinical-safety concern</h2>
+  <p>If you are worried about a specific clinical scenario involving a real patient, <strong>do not</strong> email us for advice. Contact your senior clinician, your local on-call team, NHS 111, or emergency services.</p>
+  <p>If you believe a specific piece of content in the app could mislead a reader in a safety-critical way, please mark the email subject line <em>"Safety concern"</em> so we can prioritise it.</p>
+
+  <footer>
+    <span>&copy; 2026 MLA Prep</span>
+    <span>
+      <a href="./privacy.html">Privacy</a> &middot;
+      <a href="./terms.html">Terms</a>
+    </span>
+  </footer>
+</main>
+</body>
+</html>
