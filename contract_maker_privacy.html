@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index,follow" />
+  <title>Privacy Policy — Contract Maker Pro</title>
+  <meta name="description" content="Privacy Policy for Contract Maker Pro — what we collect, what we don't, and how the offline-first model keeps your contracts on your phone." />
+  <style>
+    :root {
+      --bg: #faf6ee;
+      --surface: #ffffff;
+      --text: #0a1628;
+      --muted: #475569;
+      --border: #e3dccb;
+      --accent: #b8860b;
+      --accent-soft: #f6efd8;
+      --max: 720px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      padding: 32px 20px 80px;
+    }
+    main { max-width: var(--max); margin: 0 auto; }
+    header { margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+    h1 { font-size: 32px; line-height: 1.2; margin: 0 0 8px; letter-spacing: -0.01em; }
+    h2 { font-size: 20px; line-height: 1.3; margin: 40px 0 12px; letter-spacing: -0.005em; }
+    h3 { font-size: 16px; line-height: 1.3; margin: 24px 0 8px; }
+    p { margin: 0 0 14px; }
+    ul, ol { margin: 0 0 14px; padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+    a:hover { color: #8a6708; }
+    code { font: 14px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--accent-soft); padding: 2px 6px; border-radius: 4px; }
+    .meta { color: var(--muted); font-size: 14px; }
+    .summary {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 24px 0 32px;
+    }
+    .summary h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 0 0 8px; }
+    .summary p { margin: 0; }
+    .small { font-size: 14px; color: var(--muted); }
+    nav.footer-links { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 14px; color: var(--muted); }
+    nav.footer-links a { margin-right: 16px; }
+    @media (max-width: 480px) { body { padding: 20px 16px 64px; } h1 { font-size: 26px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Effective date: April 25, 2026 · Last updated: April 25, 2026</p>
+    </header>
+
+    <div class="summary">
+      <h2>The short version</h2>
+      <p>Contract Maker Pro is offline-first. Your contracts, drafts, signatures, and personal details stay on your device. We never see them, store them, or transmit them — except when you explicitly invoke an AI feature, which sends only the text you asked us to process.</p>
+    </div>
+
+    <h2>1. Who we are</h2>
+    <p>Contract Maker Pro ("we", "us", "our") is the developer of the iOS application "Contract Maker Pro". This Privacy Policy explains what information the app handles when you use it and how we treat that information.</p>
+    <p>The only way to contact us about privacy is by email at <a href="mailto:golukicoding@gmail.com">golukicoding@gmail.com</a>.</p>
+
+    <h2>2. What we do <em>not</em> collect</h2>
+    <p>We want this section first because it's the most important thing to know:</p>
+    <ul>
+      <li><strong>No account is required to use Contract Maker Pro.</strong> We do not ask for, collect, or store your name, email, phone number, address, or any other identifying information at sign-up — because there is no sign-up.</li>
+      <li><strong>Your contracts and drafts never leave your device by default.</strong> Templates, the drafts you create, the parties you save, and the signatures you capture are stored locally in the app's private sandbox on your iPhone or iPad. We do not have a server-side copy of any of it.</li>
+      <li><strong>We do not sell, rent, or share your personal information with advertisers, data brokers, or marketers.</strong> Ever.</li>
+    </ul>
+
+    <h2>3. What is collected, and why</h2>
+    <p>For the app to function and improve, a small amount of non-content data is processed:</p>
+
+    <h3>Anonymized usage analytics (Firebase Analytics)</h3>
+    <p>We collect events such as "app opened", "template viewed", "draft saved", and "export started" so we can understand which features are useful and which are broken. These events do <em>not</em> contain the text of your contracts, the names of parties you list, or any identifying details. The app actively redacts any field whose name suggests personal information (name, email, phone, address, body, content, etc.) before sending. Analytics is associated with a Firebase Installation ID, which is not linked to your identity.</p>
+
+    <h3>Crash reports (Firebase Crashlytics)</h3>
+    <p>If the app crashes, a crash report is sent so we can fix the bug. Crash reports include the iOS version, device model, and a stack trace. They do not include your contract text or personal data.</p>
+
+    <h3>Subscription state (RevenueCat + Apple)</h3>
+    <p>If you subscribe to Contract Maker Pro, the App Store handles the payment — we never see your card. RevenueCat, our subscription-management vendor, receives an anonymous user identifier so it can tell the app whether your subscription is active. RevenueCat may also receive purchase metadata from Apple (product purchased, transaction date, country) for receipt validation.</p>
+
+    <h3>AI feature inputs (only when you invoke them)</h3>
+    <p>Pro features such as Smart Start, Risk Scan, Explain, and Rewrite send the specific text you asked us to analyze (for example, the description you typed into Smart Start, or the clause you asked us to rewrite) to a relay server we operate, which forwards it to OpenAI's API for processing. The response is returned to your device. We do not retain these inputs or outputs on our relay; OpenAI's data-handling terms govern what they do with the request (see their policies). If you do not use AI features, no contract content is ever transmitted off your device.</p>
+
+    <h3>Permissions we request</h3>
+    <ul>
+      <li><strong>Contacts</strong> — only if you tap "Add from Contacts" while building a party. We read the contact you select on-device; we do not upload your address book.</li>
+      <li><strong>Face ID / Touch ID</strong> — only if you enable app-lock in Settings. Authentication happens on-device through Apple's Secure Enclave; we never see your biometric data.</li>
+    </ul>
+
+    <h2>4. How long we keep things</h2>
+    <ul>
+      <li>Your local data (drafts, templates, signatures, profile) stays on your device until you delete it or uninstall the app. Uninstalling the app deletes all locally stored data.</li>
+      <li>Analytics events are retained by Firebase for up to 14 months on standard settings.</li>
+      <li>Crash reports are retained by Crashlytics for up to 90 days.</li>
+      <li>Subscription records are retained as required by Apple's App Store and applicable tax / accounting law.</li>
+    </ul>
+
+    <h2>5. Third-party services we rely on</h2>
+    <p>The app integrates with these services. Each is bound by its own privacy policy.</p>
+    <ul>
+      <li><strong>Apple App Store</strong> — payment processing, subscription billing, receipts. (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a>)</li>
+      <li><strong>RevenueCat</strong> — subscription state and entitlements. (<a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a>)</li>
+      <li><strong>Google Firebase (Analytics + Crashlytics)</strong> — anonymized analytics and crash reporting. (<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a>)</li>
+      <li><strong>OpenAI</strong> — AI feature processing, only when you invoke an AI feature. (<a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">openai.com/policies/privacy-policy</a>)</li>
+    </ul>
+
+    <h2>6. Your rights</h2>
+    <p>Because we do not maintain a user account or a server-side record of your contracts, most data-subject requests are satisfied by managing the app on your device:</p>
+    <ul>
+      <li><strong>Access / portability:</strong> You already have access to all your contracts. Export any draft from the app as PDF, Word, or plain text.</li>
+      <li><strong>Deletion:</strong> Delete a draft from inside the app, or uninstall the app to wipe all locally stored data.</li>
+      <li><strong>Opt-out of analytics:</strong> Turn off "Anonymous usage analytics" in Settings → Privacy. The app will stop sending events.</li>
+      <li><strong>Opt-out of AI processing:</strong> Don't tap any AI button. The app never sends text to AI without an explicit action.</li>
+      <li><strong>California (CCPA / CPRA), EEA / UK (GDPR), Brazil (LGPD), and similar regimes:</strong> You have the right to know what we collect, request correction or deletion, and to lodge a complaint with your local data-protection authority. To exercise these rights, email <a href="mailto:golukicoding@gmail.com">golukicoding@gmail.com</a>. We will respond within 30 days.</li>
+    </ul>
+
+    <h2>7. Children's privacy</h2>
+    <p>Contract Maker Pro is not directed at children under 13, and we do not knowingly collect information from children. If you believe a child has used the app in a way that exposed their information to us, email <a href="mailto:golukicoding@gmail.com">golukicoding@gmail.com</a> and we will investigate and remove anything we hold.</p>
+
+    <h2>8. International transfers</h2>
+    <p>Our third-party processors (Firebase, RevenueCat, OpenAI) operate in the United States. By using the app you acknowledge that the limited data described above may be transferred to and processed in the U.S. We rely on Apple's contractual safeguards and the standard contractual clauses (or equivalent) where required.</p>
+
+    <h2>9. Security</h2>
+    <p>Local data on your device is protected by iOS sandboxing and (if you enable it) Face ID / Touch ID app-lock. Network requests use HTTPS. We follow reasonable industry practices to keep our minimal infrastructure secure, but no system is perfectly secure — please do not put information in a draft that you would be unwilling to lose if your device were lost or compromised.</p>
+
+    <h2>10. Changes to this policy</h2>
+    <p>We may update this policy as the app evolves. Material changes will be highlighted at the top of this page and reflected in a new "Last updated" date. Continuing to use the app after a change is acceptance of the updated policy.</p>
+
+    <h2>11. Contact</h2>
+    <p>The only way to contact us about privacy is email: <a href="mailto:golukicoding@gmail.com">golukicoding@gmail.com</a>. We respond to privacy inquiries within 30 days.</p>
+
+    <nav class="footer-links">
+      <a href="./privacy.html">Privacy</a>
+      <a href="./terms.html">Terms</a>
+      <a href="./support.html">Support</a>
+      <span>© 2026 Contract Maker Pro</span>
+    </nav>
+  </main>
+</body>
+</html>
