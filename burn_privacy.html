@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — BurnToScroll</title>
+    <meta name="description" content="How BurnToScroll handles your data. Spoiler: almost nothing leaves your device.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #00D4FF;
+            --primary-dark: #0099CC;
+            --accent: #7B61FF;
+            --energy: #FF6B35;
+            --success: #00FF88;
+            --background: #0A0E1A;
+            --surface: #141B2D;
+            --surface-elevated: #1E2842;
+            --text-primary: #FFFFFF;
+            --text-secondary: #8B9DC3;
+            --text-muted: #5A6B8A;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .bg-gradient {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(ellipse at 20% 20%, rgba(0, 212, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(123, 97, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(255, 107, 53, 0.05) 0%, transparent 50%);
+            z-index: -1;
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        nav {
+            padding: 24px 0;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            background: rgba(10, 14, 26, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-back:hover { color: var(--primary); }
+
+        main { padding: 140px 0 80px; }
+
+        .article {
+            max-width: 760px;
+            margin: 0 auto;
+            background: var(--surface);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            padding: 56px 48px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--primary);
+            background: rgba(0, 212, 255, 0.1);
+            padding: 6px 12px;
+            border-radius: 999px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .meta {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 40px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .lead {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+            scroll-margin-top: 120px;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        p, li {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        p { margin-bottom: 16px; }
+
+        ul, ol { margin: 0 0 20px 24px; }
+        li { margin-bottom: 8px; }
+
+        a { color: var(--primary); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--accent); }
+
+        strong { color: var(--text-primary); font-weight: 600; }
+
+        .callout {
+            background: rgba(0, 212, 255, 0.06);
+            border-left: 3px solid var(--primary);
+            padding: 20px 24px;
+            border-radius: 8px;
+            margin: 24px 0;
+        }
+
+        .callout p:last-child { margin-bottom: 0; }
+
+        .perm-list {
+            list-style: none;
+            margin: 0 0 24px 0;
+            padding: 0;
+        }
+
+        .perm-list li {
+            background: var(--surface-elevated);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+        }
+
+        .perm-list .perm-name {
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .perm-list .perm-purpose {
+            display: block;
+            font-style: italic;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+
+        .perm-list .perm-note {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        .toc {
+            background: var(--surface-elevated);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 0 0 40px 0;
+        }
+
+        .toc h3 {
+            margin: 0 0 12px 0;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+        }
+
+        .toc ol {
+            margin: 0;
+            padding-left: 20px;
+            columns: 2;
+            column-gap: 24px;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+            break-inside: avoid;
+        }
+
+        .toc a { color: var(--text-secondary); }
+        .toc a:hover { color: var(--primary); }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 80px;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        footer p { color: var(--text-muted); }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .footer-links a:hover { color: var(--primary); }
+
+        @media (max-width: 768px) {
+            .article { padding: 40px 24px; border-radius: 16px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.3rem; }
+            .toc ol { columns: 1; }
+            footer .container { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🔥</div>
+                <span>BurnToScroll</span>
+            </a>
+            <a href="index.html" class="nav-back">← Home</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <article class="article">
+                <span class="eyebrow">Legal</span>
+                <h1>Privacy Policy</h1>
+                <p class="meta">Effective date: May 7, 2026 · Last updated: May 7, 2026</p>
+
+                <p class="lead">
+                    BurnToScroll is built so that almost nothing about you leaves your phone.
+                    This policy explains, in plain English, what we do and don't collect, who
+                    we share it with, and what control you have over it.
+                </p>
+
+                <div class="toc">
+                    <h3>On this page</h3>
+                    <ol>
+                        <li><a href="#who-we-are">Who we are</a></li>
+                        <li><a href="#what-we-collect">What we collect</a></li>
+                        <li><a href="#permissions">Permissions we request</a></li>
+                        <li><a href="#third-parties">Third‑party services</a></li>
+                        <li><a href="#how-we-use">How we use information</a></li>
+                        <li><a href="#sharing">Sharing &amp; selling</a></li>
+                        <li><a href="#security">Data security</a></li>
+                        <li><a href="#children">Children</a></li>
+                        <li><a href="#your-rights">Your rights &amp; choices</a></li>
+                        <li><a href="#international">International users</a></li>
+                        <li><a href="#changes">Changes to this policy</a></li>
+                        <li><a href="#contact">Contact us</a></li>
+                    </ol>
+                </div>
+
+                <h2 id="who-we-are">1. Who we are</h2>
+                <p>
+                    BurnToScroll ("we", "us", "our", or the "App") is an iOS application that helps
+                    you replace doomscrolling with short bouts of exercise. The App is owned and
+                    operated by Vishwesh Pratap Singh. If you have any questions about this policy,
+                    you can reach us at
+                    <a href="mailto:golukicoding@gmail.com">golukicoding@gmail.com</a>.
+                </p>
+
+                <h2 id="what-we-collect">2. What we collect</h2>
+
+                <h3>Stored on your device, never sent to us</h3>
+                <p>
+                    All of the information you provide to BurnToScroll is stored locally on your
+                    iPhone in the App's iOS sandbox. We do not operate any backend server, account
+                    system, or cloud sync. Specifically, the following stay on your device only:
+                </p>
+                <ul>
+                    <li>The name you enter during onboarding</li>
+                    <li>Your onboarding answers (current and target screen time, goals, pain points)</li>
+                    <li>Your selected blocked apps (held by Apple's Family Controls; see below)</li>
+                    <li>Your daily goal, exercise preferences, reminder time, and other settings</li>
+                    <li>Your exercise history (reps, plank duration, session timestamps)</li>
+                    <li>Your earned screen-time balance</li>
+                    <li>Your streak, achievements, and gamification stats</li>
+                </ul>
+
+                <h3>Camera frames</h3>
+                <p>
+                    During a workout, the App reads frames from your iPhone's camera and runs them
+                    through an on-device pose-detection model (Google's MediaPipe, bundled into the
+                    App). The model produces keypoints that are used in real time to count your reps
+                    or measure your plank hold. <strong>Camera frames are never recorded, never
+                    saved to disk, and never transmitted off your device.</strong>
+                </p>
+
+                <h3>Information we do <em>not</em> collect</h3>
+                <div class="callout">
+                    <p>
+                        <strong>BurnToScroll contains no analytics SDK, no crash-reporting SDK, no
+                        advertising SDK, and no tracking SDK of any kind.</strong> We do not know how
+                        often you open the App, how long your sessions are, or which screens you
+                        visit. There is nothing for us to look at on the server side because there
+                        is no server.
+                    </p>
+                </div>
+
+                <h2 id="permissions">3. Permissions we request</h2>
+                <p>
+                    iOS shows you a permission prompt the first time the App needs access to a
+                    sensitive capability. The prompt text below is exactly what you'll see.
+                </p>
+
+                <ul class="perm-list">
+                    <li>
+                        <span class="perm-name">Camera (required)</span>
+                        <span class="perm-purpose">"BurnToScroll uses your camera to track exercise form and count reps."</span>
+                        <span class="perm-note">
+                            Used in real time for on-device pose detection only. The App is not
+                            functional without it.
+                        </span>
+                    </li>
+                    <li>
+                        <span class="perm-name">Camera — share card (optional)</span>
+                        <span class="perm-purpose">"BurnToScroll needs camera access so you can take a photo for your shareable workout card."</span>
+                        <span class="perm-note">
+                            Only used if you choose to take a fresh photo for the optional
+                            workout-share card. Decline at any time.
+                        </span>
+                    </li>
+                    <li>
+                        <span class="perm-name">Photo Library — read (optional)</span>
+                        <span class="perm-purpose">"BurnToScroll needs access to your photos so you can attach a background image to a shareable workout card."</span>
+                        <span class="perm-note">
+                            Lets you pick an existing photo as a share-card background. Photos
+                            stay on your device.
+                        </span>
+                    </li>
+                    <li>
+                        <span class="perm-name">Photo Library — save (optional)</span>
+                        <span class="perm-purpose">"BurnToScroll saves shareable workout cards to your photo library when you choose to."</span>
+                        <span class="perm-note">
+                            Used only when you tap "Save" on a share card.
+                        </span>
+                    </li>
+                    <li>
+                        <span class="perm-name">Notifications (optional)</span>
+                        <span class="perm-purpose">Used for daily exercise reminders, streak warnings, and balance alerts.</span>
+                        <span class="perm-note">
+                            You can decline or revoke this in iOS Settings → Notifications →
+                            BurnToScroll. The App still works without it; you just won't get
+                            reminders.
+                        </span>
+                    </li>
+                    <li>
+                        <span class="perm-name">Family Controls / Screen Time</span>
+                        <span class="perm-purpose">Required so iOS can shield apps you select until you've earned screen time.</span>
+                        <span class="perm-note">
+                            Apple owns and manages this entitlement. Your selected app list is
+                            represented by an opaque Apple object that BurnToScroll cannot read
+                            the contents of, and is stored only on your device.
+                        </span>
+                    </li>
+                </ul>
+
+                <h2 id="third-parties">4. Third-party services</h2>
+
+                <h3>Apple</h3>
+                <p>
+                    The App is distributed through Apple's App Store and uses Apple frameworks for
+                    in-app purchases, push notifications, and Family Controls / Screen Time. Apple's
+                    handling of this information is governed by the
+                    <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a>.
+                </p>
+
+                <h3>RevenueCat</h3>
+                <p>
+                    We use <a href="https://www.revenuecat.com" target="_blank" rel="noopener">RevenueCat</a>
+                    to process and reconcile in-app subscription purchases on top of Apple's StoreKit.
+                    When you subscribe, restore a purchase, or open the paywall, RevenueCat may
+                    receive an anonymous customer identifier, your subscription receipt, and basic
+                    device metadata. RevenueCat does not receive your name, email address, exercise
+                    history, or any other content from the App. Their handling is governed by the
+                    <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat Privacy Policy</a>.
+                </p>
+
+                <h3>That's the entire list</h3>
+                <p>
+                    There are no other third-party services. No analytics provider, no crash
+                    reporter, no ad network, no marketing pixel, no email-list integration.
+                </p>
+
+                <h2 id="how-we-use">5. How we use information</h2>
+                <p>The limited information described above is used only to:</p>
+                <ul>
+                    <li>Make the App work (count reps, track screen time earnings, schedule reminders)</li>
+                    <li>Process and restore your subscription, via Apple and RevenueCat</li>
+                    <li>Reply to support emails you send us</li>
+                </ul>
+                <p>
+                    We do not build user profiles, train machine-learning models on your data, or
+                    sell anything to anyone.
+                </p>
+
+                <h2 id="sharing">6. Sharing &amp; selling</h2>
+                <p>
+                    We do not sell, rent, or trade your information. The only "sharing" that occurs
+                    is what's strictly required for the App to function: subscription receipts going
+                    to Apple and RevenueCat for billing purposes (see Section 4).
+                </p>
+
+                <h2 id="security">7. Data security</h2>
+                <p>
+                    All of your in-App data lives in iOS's per-app sandbox, protected by the
+                    operating system. Because we don't transmit your data to a server we control,
+                    there's no central database to be breached or intercepted in transit. If your
+                    device itself is compromised, the same data-loss exposure applies as to any
+                    other app on your phone.
+                </p>
+
+                <h2 id="children">8. Children</h2>
+                <p>
+                    BurnToScroll is not directed at children under 13, and we do not knowingly
+                    collect information from them. The App requires iOS 16 or newer; users in
+                    jurisdictions with a higher age of digital consent should comply with their
+                    local rules and, if a minor, only use the App with a parent's permission. If
+                    you believe a child has used the App without permission, contact us and we'll
+                    help you wipe their device-local data.
+                </p>
+
+                <h2 id="your-rights">9. Your rights &amp; choices</h2>
+                <p>
+                    Because your data lives on your device, you have full control over it without
+                    needing to send us any request:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Access:</strong> open the App. Your stats, history, settings, and
+                        onboarding answers are all visible inside it.
+                    </li>
+                    <li>
+                        <strong>Correction:</strong> edit anything in Settings or by re-running
+                        onboarding via Settings → Personalize Again.
+                    </li>
+                    <li>
+                        <strong>Deletion:</strong> Settings → Clear History wipes your exercise log;
+                        Settings → Reset All Settings wipes all in-App data and returns it to a
+                        fresh-install state. Uninstalling the App removes everything iOS has stored
+                        for it.
+                    </li>
+                    <li>
+                        <strong>Subscription data:</strong> to delete your RevenueCat record,
+                        contact us at <a href="mailto:golukicoding@gmail.com">golukicoding@gmail.com</a>
+                        and we'll forward the request.
+                    </li>
+                    <li>
+                        <strong>Opt-out of "sale" or "sharing":</strong> nothing to opt out of — we
+                        don't engage in either.
+                    </li>
+                </ul>
+                <p>
+                    Residents of California (CCPA / CPRA), the EU and UK (GDPR / UK GDPR), and other
+                    jurisdictions with privacy laws have the rights granted by those laws. Email us
+                    if you want to exercise any of them.
+                </p>
+
+                <h2 id="international">10. International users</h2>
+                <p>
+                    Your data does not cross any border because it never leaves your device. The
+                    only exception is subscription information processed by Apple and RevenueCat,
+                    which may be stored in the United States or other regions per their respective
+                    privacy policies linked above.
+                </p>
+
+                <h2 id="changes">11. Changes to this policy</h2>
+                <p>
+                    We may update this policy from time to time. When we do, we'll bump the
+                    "Effective date" at the top. Material changes will also be highlighted in the
+                    App on your next launch.
+                </p>
+
+                <h2 id="contact">12. Contact us</h2>
+                <p>
+                    Questions, concerns, or rights requests? Email
+                    <a href="mailto:golukicoding@gmail.com">golukicoding@gmail.com</a>. This is the
+                    only support channel we monitor.
+                </p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 BurnToScroll. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="mailto:golukicoding@gmail.com">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
