@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — BurnToScroll</title>
+    <meta name="description" content="Get help with BurnToScroll. Email-only support, fast replies.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #00D4FF;
+            --primary-dark: #0099CC;
+            --accent: #7B61FF;
+            --energy: #FF6B35;
+            --success: #00FF88;
+            --background: #0A0E1A;
+            --surface: #141B2D;
+            --surface-elevated: #1E2842;
+            --text-primary: #FFFFFF;
+            --text-secondary: #8B9DC3;
+            --text-muted: #5A6B8A;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .bg-gradient {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(ellipse at 20% 20%, rgba(0, 212, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(123, 97, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(255, 107, 53, 0.05) 0%, transparent 50%);
+            z-index: -1;
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        nav {
+            padding: 24px 0;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            background: rgba(10, 14, 26, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .nav-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-back:hover { color: var(--primary); }
+
+        main { padding: 140px 0 80px; }
+
+        .wrap {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--primary);
+            background: rgba(0, 212, 255, 0.1);
+            padding: 6px 12px;
+            border-radius: 999px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-lead {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: var(--surface);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 24px;
+            padding: 40px 36px;
+            margin-bottom: 56px;
+            text-align: center;
+            box-shadow: 0 16px 48px rgba(0, 212, 255, 0.08);
+        }
+
+        .contact-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin: 0 auto 20px;
+        }
+
+        .contact-card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .contact-card p {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .email-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            padding: 14px 24px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--background);
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 8px 24px rgba(0, 212, 255, 0.2);
+        }
+
+        .email-pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(0, 212, 255, 0.3);
+        }
+
+        .response-note {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 16px;
+        }
+
+        .single-channel {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            margin-top: 16px;
+            background: rgba(255, 107, 53, 0.06);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-radius: 10px;
+            padding: 12px 16px;
+        }
+
+        .single-channel strong { color: var(--energy); }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .section-sub {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        details.faq {
+            background: var(--surface);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: border-color 0.2s;
+        }
+
+        details.faq[open] {
+            border-color: rgba(0, 212, 255, 0.25);
+        }
+
+        details.faq summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 20px 24px;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            user-select: none;
+        }
+
+        details.faq summary::-webkit-details-marker { display: none; }
+
+        details.faq summary::after {
+            content: '+';
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            line-height: 1;
+            transition: transform 0.2s, color 0.2s;
+        }
+
+        details.faq[open] summary::after {
+            content: '−';
+            color: var(--primary);
+        }
+
+        .faq-body {
+            padding: 0 24px 20px;
+            color: var(--text-secondary);
+            font-size: 0.97rem;
+        }
+
+        .faq-body p { margin-bottom: 12px; }
+        .faq-body p:last-child { margin-bottom: 0; }
+        .faq-body ul { margin: 0 0 12px 20px; }
+        .faq-body li { color: var(--text-secondary); margin-bottom: 4px; }
+        .faq-body a { color: var(--primary); text-decoration: none; }
+        .faq-body a:hover { color: var(--accent); }
+        .faq-body code {
+            background: rgba(0, 212, 255, 0.08);
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: var(--primary);
+        }
+        .faq-body strong { color: var(--text-primary); }
+
+        .closing {
+            text-align: center;
+            padding: 48px 24px;
+            background: var(--surface);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            margin-top: 56px;
+        }
+
+        .closing p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 16px;
+        }
+
+        .closing a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .closing a:hover { color: var(--accent); }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 80px;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        footer p { color: var(--text-muted); }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover { color: var(--primary); }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.1rem; }
+            .contact-card { padding: 32px 24px; border-radius: 18px; }
+            .section-title { font-size: 1.4rem; }
+            footer .container { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🔥</div>
+                <span>BurnToScroll</span>
+            </a>
+            <a href="index.html" class="nav-back">← Home</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="wrap">
+                <section class="hero">
+                    <span class="eyebrow">Support</span>
+                    <h1>Need a hand with BurnToScroll?</h1>
+                    <p class="hero-lead">
+                        Most issues can be cleared up in a minute. Skim the FAQ below — if your
+                        question isn't there, email us. We reply personally.
+                    </p>
+                </section>
+
+                <section class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h2>Email is the only way to reach us</h2>
+                    <p>For the fastest reply, write to us directly. There's no contact form, no chat widget, no support phone — just one inbox we actually read.</p>
+                    <a href="mailto:golukicoding@gmail.com?subject=BurnToScroll%20Support" class="email-pill">
+                        <span>golukicoding@gmail.com</span>
+                        <span>→</span>
+                    </a>
+                    <p class="response-note">We aim to reply within 3 business days.</p>
+                    <div class="single-channel">
+                        <strong>Heads up:</strong> any reviews, social DMs, or third-party messages
+                        won't be seen. Email is the only channel we monitor.
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="section-title">Frequently asked questions</h2>
+                    <p class="section-sub">Tap a question to expand it.</p>
+
+                    <details class="faq">
+                        <summary>I denied the camera permission and now nothing works.</summary>
+                        <div class="faq-body">
+                            <p>
+                                Pose detection is the only way the App can count your reps, so
+                                the camera is required. To re-enable it:
+                            </p>
+                            <ol>
+                                <li>Open iOS <strong>Settings</strong>.</li>
+                                <li>Scroll down and tap <strong>BurnToScroll</strong>.</li>
+                                <li>Toggle <strong>Camera</strong> on.</li>
+                                <li>Return to BurnToScroll. The exercise screen will work right away.</li>
+                            </ol>
+                        </div>
+                    </details>
+
+                    <details class="faq">
+                        <summary>App blocking isn't actually blocking my apps.</summary>
+                        <div class="faq-body">
+                            <p>
+                                BurnToScroll relies on Apple's Family Controls / Screen Time
+                                framework to shield apps. If shielding isn't working, check:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>Authorization:</strong> open BurnToScroll → Settings
+                                    → make sure App Blocking is enabled and you've granted
+                                    Screen Time access. If you skipped this step in onboarding,
+                                    Settings → "Set up app blocking" will run it again.
+                                </li>
+                                <li>
+                                    <strong>Selected apps:</strong> Settings → Manage Blocked
+                                    Apps. Apple's picker controls the actual list — make sure
+                                    the apps you want shielded are checked.
+                                </li>
+                                <li>
+                                    <strong>Available time balance:</strong> if your balance
+                                    isn't zero, the apps are intentionally unblocked. They'll
+                                    re-shield once you spend the time.
+                                </li>
+                                <li>
+                                    <strong>iOS Screen Time conflicts:</strong> if you have
+                                    Apple's own Screen Time app limits configured, they may
+                                    interact unpredictably. Try disabling them temporarily.
+                                </li>
+                            </ul>
+                            <p>Still stuck? Email us with your iPhone model and iOS version.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq">
+                        <summary>My reps aren't being counted accurately.</summary>
+                        <div class="faq-body">
+                            <p>
+                                Pose detection runs on a real-time on-device model — accuracy
+                                depends a lot on the setup. A quick checklist:
+                            </p>
+                            <ul>
+                                <li><strong>Lighting:</strong> well-lit room, no harsh backlight (sun behind you, lamp behind you, etc.).</li>
+                                <li><strong>Framing:</strong> your full body should be in frame — head to feet for squats, shoulders to ankles for pushups, full body for planks.</li>
+                                <li><strong>Distance:</strong> roughly 6 feet (2 meters) between phone and you usually works best.</li>
+                                <li><strong>Phone position:</strong> stable surface or stand. Don't hold the phone.</li>
+                                <li><strong>Clothing:</strong> high-contrast outfits (against the floor/wall) help; very baggy clothing can confuse the model.</li>
+                                <li><strong>Form:</strong> clean reps with full range of motion are detected best. Half-reps or extremely fast reps may be missed.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="faq">
+                        <summary>How do I cancel my subscription, or restore it on a new phone?</summary>
+                        <div class="faq-body">
+                            <p>
+                                Subscriptions are processed by Apple, so cancellation lives in
+                                your Apple ID, not in our App.
+                            </p>
+                            <p><strong>Cancel:</strong></p>
+                            <ol>
+                                <li>Open iOS <strong>Settings</strong> → tap your name at the top.</li>
+                                <li>Tap <strong>Subscriptions</strong>.</li>
+                                <li>Tap <strong>BurnToScroll</strong>.</li>
+                                <li>Tap <strong>Cancel Subscription</strong>.</li>
+                            </ol>
+                            <p>
+                                Or use this direct deeplink:
+                                <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">apps.apple.com/account/subscriptions</a>.
+                                You'll keep premium access for the rest of the period you paid for.
+                            </p>
+                            <p><strong>Restore on a new phone:</strong></p>
+                            <ol>
+                                <li>Sign in to the new phone with the same Apple ID you used to subscribe.</li>
+                                <li>Install BurnToScroll.</li>
+                                <li>Open the paywall and tap <strong>Restore Purchases</strong>.</li>
+                            </ol>
+                        </div>
+                    </details>
+
+                    <details class="faq">
+                        <summary>I want a refund.</summary>
+                        <div class="faq-body">
+                            <p>
+                                All payments go through Apple, so refunds are handled by Apple,
+                                not by us. Submit a refund request at
+                                <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>
+                                — sign in with the Apple ID that made the purchase, find
+                                BurnToScroll, and choose "Request a refund."
+                            </p>
+                            <p>
+                                If Apple denies the refund and you'd still like to talk to us
+                                about your experience, please email us. We can't reverse the
+                                charge but we'd like to know what went wrong.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq">
+                        <summary>My streak says it broke even though I exercised.</summary>
+                        <div class="faq-body">
+                            <p>
+                                The streak counts <strong>calendar days</strong> on which you
+                                completed at least one workout, in your phone's local time.
+                                Common pitfalls:
+                            </p>
+                            <ul>
+                                <li>You finished a workout just after midnight, so it counted toward the next day.</li>
+                                <li>You changed iPhone time zones — the day boundary shifted.</li>
+                                <li>Your phone was off / the app wasn't opened for a full day.</li>
+                            </ul>
+                            <p>
+                                If you believe the streak broke incorrectly, email us with the
+                                date and time of your most recent workout and we'll take a look.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq">
+                        <summary>I'm not getting any notifications from BurnToScroll.</summary>
+                        <div class="faq-body">
+                            <p>If reminders, streak warnings, or balance alerts aren't showing up:</p>
+                            <ol>
+                                <li>iOS <strong>Settings</strong> → <strong>Notifications</strong> → <strong>BurnToScroll</strong>. Make sure <strong>Allow Notifications</strong> is on, and Lock Screen / Banners are enabled.</li>
+                                <li>In BurnToScroll → <strong>Settings</strong>, confirm the relevant toggles (Daily Reminder, Streak Alerts, Weekly Summary) are on.</li>
+                                <li>Make sure you're not in a Focus mode that's silencing the App.</li>
+                                <li>If you initially declined the notifications prompt during onboarding, iOS won't ask again — re-enable it from the Settings step above.</li>
+                            </ol>
+                        </div>
+                    </details>
+
+                    <details class="faq">
+                        <summary>How do I delete all my data?</summary>
+                        <div class="faq-body">
+                            <p>Your data is stored locally on the phone, so you control it directly:</p>
+                            <ul>
+                                <li><strong>Just clear exercise history:</strong> BurnToScroll → Settings → Clear History.</li>
+                                <li><strong>Wipe everything in-App:</strong> BurnToScroll → Settings → Reset All Settings.</li>
+                                <li><strong>Remove the App and all of its data:</strong> long-press the App icon on your Home Screen → Remove App → Delete App.</li>
+                            </ul>
+                            <p>
+                                See the <a href="privacy.html">Privacy Policy</a> for the full
+                                story on what data exists and where.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq">
+                        <summary>Can you add Android support / a feature I'd love?</summary>
+                        <div class="faq-body">
+                            <p>
+                                We love feature requests. The fastest way is the
+                                <strong>Send Feedback</strong> row in the App's Settings →
+                                Support section, which pre-fills your iPhone model and version
+                                so we can prioritize. Or just email us directly.
+                            </p>
+                            <p>
+                                Android support isn't on the immediate roadmap — the App
+                                depends on Apple's Family Controls / Screen Time, which has no
+                                direct equivalent on Android.
+                            </p>
+                        </div>
+                    </details>
+                </section>
+
+                <section class="closing">
+                    <p>Didn't find what you were looking for?</p>
+                    <a href="mailto:golukicoding@gmail.com?subject=BurnToScroll%20Support">Email golukicoding@gmail.com →</a>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 BurnToScroll. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="mailto:golukicoding@gmail.com">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
